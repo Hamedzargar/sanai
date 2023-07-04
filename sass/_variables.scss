@@ -1,0 +1,30 @@
+$mainTextColor : #2C2C2C;
+$secondTextColor : #3C3C3C;
+$greyColor : #797979;
+
+@mixin displayer{
+	opacity: 1;
+	visibility: visible;
+}
+@mixin displayerI{
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+@mixin hider{
+	opacity: 0;
+	visibility: hidden;
+}
+@mixin hiderI{
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+@mixin trDisplayer{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+@mixin sbflex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

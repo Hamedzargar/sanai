@@ -14,11 +14,11 @@
 	<footer class="generalFooterParent">
 		<div class="generalfooter mainView">
 			<div class="generalFooterCl">
-				<h3>کلینیک فیزیوتراپی سنایی</h3>
+				<h3 class="mediumWeight">کلینیک فیزیوتراپی سنایی</h3>
 				<p class="mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
 			</div>
 			<div class="generalFooterCl">
-				<h3>آیتم فوتر تست</h3>
+				<h3 class="mediumWeight" >آیتم فوتر تست</h3>
 				<ul>
 					<li><a href="#">تست فوتر</a></li>
 					<li><a href="#">تست فوتر</a></li>
@@ -27,7 +27,7 @@
 				</ul>
 			</div>
 			<div class="generalFooterCl">
-				<h3>آیتم فوتر تست</h3>
+				<h3 class="mediumWeight">آیتم فوتر تست</h3>
 				<ul>
 					<li><a href="#">تست فوتر</a></li>
 					<li><a href="#">تست فوتر</a></li>
@@ -36,7 +36,7 @@
 				</ul>
 			</div>
 			<div class="generalFooterCl">
-				<h3>آیتم فوتر تست</h3>
+				<h3 class="mediumWeight">آیتم فوتر تست</h3>
 				<ul>
 					<li><a href="#">تست فوتر</a></li>
 					<li><a href="#">تست فوتر</a></li>

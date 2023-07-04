@@ -129,19 +129,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.mainHeading{
-    font-size: 30px;
-    line-height: 60px;
-    word-spacing: -5px;
-    margin: 0;
-}
-.mainParagraph{
-	font-size: 13.5px;
-    color: #8f8f8f;
-    font-weight: 400;
-    line-height: 30px;
-    margin: 0;
-}
 
 /**********************************************     Header Desktop       ****************************************************************/
 
@@ -208,10 +195,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         padding: 0;
         list-style-type: none;
         li{
+			&::before{
+				display: none;
+			}
             a{
                 font-size: 13.5px;
-                font-weight: 500;
-                color: #595959;
+                // font-weight: 500;
+                // color: #595959;
             }
             margin: 0 12px;
             display: inline-block;
@@ -252,6 +242,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                     &:last-child{
                         border-bottom: none;
                     }
+
                     a{
                         font-size: 13px;
                         font-weight: 400;
@@ -330,7 +321,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-/*******************************************   Home Page    ********************************************/
+
+
+
+/*******************************************   Home Page  ok   ********************************************/
+
+
+
+
 .homePageSliderSectionParent{
 	.homePageSliderSection{
 		display: flex;
@@ -339,16 +337,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		.homePageSliderSectionFlexItemOne{
 			width: 45%;
+			@include xs{
+				width: 100%;
+				order: 2;
+				margin-top: 30px;
+			}
 			span{
 				font-size: 16.5px;
 				color: #3570ff;
 				font-weight: 400;
+				@include xs{
+					display: block;
+					text-align: center;
+				}
 			}
 			h2{
-				font-size: 45px;
-				margin: 10px 0;
 				line-height: 70px;
+				@include xs{
+					line-height: 50px !important;
+					text-align: center;
+				}
 				margin-top: 0;
+				margin-bottom: 10px;
 				word-spacing: -8px;
 			}
 			.paragraphPart{
@@ -356,11 +366,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				flex-wrap: wrap;
 				justify-content: space-between;
 				padding-left: 35px;
+				@include xs{
+					justify-content: center;
+					padding-left: 0;
+				}
 				.flexPartLeft{
 					width: 88%;
 					order: 2;
 					padding-right: 20px;
 					position: relative;
+					@include xs{
+						padding-right: 5px;
+						width: 100%;
+					}
+					.noBorderButton{
+						padding-right: 20px;
+					}
+					p{
+						@include xs{
+							text-align: center;
+						}
+					}
 					&::after{
 						position: absolute;
 						content: "";
@@ -370,19 +396,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 						background-repeat: no-repeat;
 						top: 15px;
 						left: 100%;	
-					}
-					p{
-						font-size: 13.5px;
-						color: #8f8f8f;
-						font-weight: 400;
-						line-height: 30px;
+						@include xs{
+							display: none;
+						}
 					}	
 					.sliderSectionBtnPart{
 						display: flex;
 						flex-wrap: wrap;
 						justify-content: right;
-						.btnHasBg{
-							margin-left: 15px;
+						@include xs{
+							justify-content: space-between;
 						}
 					}
 				}
@@ -407,6 +430,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			height: 600px;
 			border-radius: 20px;
 			overflow: hidden;
+			@include xs{
+				width: 100%;
+				order: 1;
+				height: 400px;
+			}
+			@include xxs{
+				height: 350px;
+			}
 			img{
 				display: block;
 				width: 100%;
@@ -417,16 +448,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+
+
+/*********** ok  ****************/
+
 .homePageCatSectionParent{
-	margin-top: 80px;
     padding: 50px 0;
-    background-color: #112437;
 	.headerTitlePart{
-		text-align: center;
 		span{
 			color: #fff;
 			font-size: 14.5px;
 			font-weight: 300;
+			line-height: 30px;
 		}
 	}
 	.catLogoPart{
@@ -441,11 +474,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
+			@include xs{
+				width: 48%;
+				margin-bottom: 40px;
+				&:last-child{
+					margin: auto;
+					margin-bottom: 0;
+				}
+			}
 			img{
 				width: 90px;
 				transform: scale(0.8);
 				opacity: 0.7;
 				transition: all 0.3s;
+				@include xs{
+					opacity: 1;
+				}
 			}
 			span{
 				opacity: 0;
@@ -456,6 +500,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				font-size: 12.5px;
 				display: block;
 				padding-top: 20px;
+				@include xs{
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
 			}	
 			&:hover{
 				img{
@@ -472,32 +521,38 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+
+/******** ok  *************/
 .homePageBimehParent{
-	margin-top: 80px;
 	.homePageBimeh {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		h2{
-			width: 48%;
-			font-size: 30px;
-			line-height: 60px;
-			word-spacing: -5px;
-			margin: 0;
+		@include xs{
+			text-align: center;
 		}
-		p{
+		.generalHeading , p{
 			width: 48%;
-			font-size: 13.5px;
-			color: #8f8f8f;
-			font-weight: 400;
-			line-height: 30px;
-			margin: 0;
+			@include md{
+				width: 100%;
+			}
+		}
+		.generalHeading{
+			h2{
+				@include xs{
+					font-size: 23px !important;
+					line-height: 50px !important;
+				}
+			}
 		}
 	}
 }
+
+
+/************ ok  ****************/
+
 .homePageServiceBoxParent{
-	margin-top: 80px;
 	.homePageServiceBox {
 		display: flex;
 		flex-wrap: wrap;
@@ -505,70 +560,74 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		.serviceBoxParent{
 			width: 32%;
+			@include sm{
+				width: 48%;
+				&:last-child{
+					margin: auto;
+					margin-top: 20px;
+				}
+			}
+			@include xs{
+				width: 100%;
+				margin-top: 20px;
+				&:first-child{
+					margin-top: 0;
+				}
+			}
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			background-color: rebeccapurple;
-			border-radius: 20px;
 			padding: 40px 30px 30px 50px;
+			@include xxs{
+				padding:20px;
+			}
 			img{
 				max-width: 50px;
 				max-height: 50px;
 			}
 			h3{
-				font-size: 18px;
-				font-weight: 700;
 				color: #fff;
 				margin-top: 30px;
 				margin-bottom: 10px;
+				@include xs{
+					margin-top: 10px;
+				}
 			}
 			p{
-				font-size: 12.5px;
 				color: #fff;
-				font-weight: 300;
-				margin: 0;
 				line-height: 23px;
+				font-weight: 300;
 			}
-			.generalBtn{
-				width: max-content;
-				padding: 0;
-				margin-top: 30px;
-				span{
-					color: #fff !important;
-					svg{
-						fill: #fff !important;
-					}
+		}
+		.box1 , .box2{
+			.generalButton{
+				color: #fff !important;
+				&::before{
+					content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
 				}
 			}
 		}
+
 		.box1{
-			background-color: #112437;
+			background-color: $mainColorDark;
+
 		}
 		.box2{
-			background-color: #3570ff;
+			background-color: $mainColor;
+
 		}
 		.box3{
-			background-color: #ebecf2;
-			h3{
-				color: #23262c;
-			}
-			p{
-				color: #23262c;
-			}
-			.generalBtn{
-				span{
-					color: #23262c !important;
-					svg{
-						fill: #23262c !important;
-					}
-				}
+			background-color: $offColor;
+			h3,p{
+				color: $textColorDark;
 			}
 		}
 	}
 }
+ 
+/************  ok  *************/
 
 .homePageAboutSectionParent{
-	margin-top: 80px;
 	.homePageAboutSection{
 		display: flex;
 		flex-wrap: wrap;
@@ -576,6 +635,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		.aboutSectionTxtPart , .aboutSectionImgPart{
 			width: 48%;
+			@include xs{
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.aboutSectionTxtPart{
+			@include xs{
+				order: 1;
+				.generalHeading {
+					margin: 30px 0;
+					margin-top: 0;
+				}
+				.generalButton{
+					margin: 30px auto;
+				}
+			}
+		}
+		.aboutSectionImgPart{
+			@include xs{
+				order: 2;
+			}
 		}
 		.aboutSectionImgPart{
 			img{
@@ -584,27 +664,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				border-radius: 20px;
 			}
 		}
-		.aboutSectionTxtPart{
-			h2{
-				margin-bottom: 30px;
-			}
-		}
 	}
 }
 
+
+/*********** ok  ***********/
+
+
 .homePageCountNumParent{
 	padding: 70px 0;
-    margin-top: 80px;
-    background-color: #ebecf2;
-	.sectionHeadimg {
-		text-align: center;
-		h2{
-			margin-bottom: 20px;
-		}
-		span{
-			font-size: 12.5px;
-			line-height: 25px;
-		}
+    background-color: $offColor;
+	h2{
+		margin-bottom: 20px;
+	}
+	.mainParagraph{
+		line-height: 25px;
+		font-weight: 300 !important;
 	}
 	.homePageCountNum {
 		display: flex;
@@ -612,8 +687,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: center;
 		align-items: center;
 		padding: 60px 0px;
+		@include xs{
+			padding: 0;
+			justify-content: space-between;
+		}
 		.outerCountNum{
 			width: 25%;
+			@include xs{
+				width: 48%;
+				position: static;
+			}
 			.innerCountNum{
 				border-radius: 100%;
 				width: 300px;
@@ -621,9 +704,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				padding: 30px;
-				text-align: center;
 				position: relative;
+				@include xs{
+					position: static;
+					width: 180px;
+					height: 180px;
+					&:nth-child(1),&:nth-child(2){
+						margin-bottom: 20px;
+					}
+				}
+				@include xxs{
+					width: 150px;
+					height: 150px;
+				}
 				span{
 					display: flex;
 					align-items: center;
@@ -632,12 +725,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				}
 				.numbePart{
 					font-size: 50px;
-					font-family: cursive;
+					@include xs{
+						font-size: 25px;
+					}
 				}
 				.descPart{
-					font-size: 11.5px;
 					font-weight: 300;
 					margin-top: 15px;
+					@include xs{
+						margin-top: 5px;
+					}
 
 				}
 			}
@@ -649,32 +746,36 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			}
 			.circle1{
 				left: -65PX;
-				background-color: #112437;
+				background-color: $mainColorDark;
 				color: #fff;
 				z-index: 99;
 			}
 			.circle2{
 				left: -25PX;
-				border: 1px solid #3471fe;
+				border: 1px solid $mainColor;
 				z-index: 98;
 			}
 			.circle3{
 				right: -25PX;
-				background-color: #3471fe;
+				background-color: $mainColor;
 				color: #fff;
 				z-index: 99;
 			}
 			.circle4{
 				right: -65px;
-				border: 1px solid #3471fe;
+				border: 1px solid $mainColor;
 				z-index: 98;
 			}
 		}
 
 	}
 }
+
+
+
+/***************  ok  *********************/
+
 .homePageChartSectionParent{
-	margin-top: 80px;
 	.homePageChartSection{
 		display: flex;
 		flex-wrap: wrap;
@@ -682,12 +783,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		.chartSectionPartTxt{
 			width: 48%;
-			h2{
-				margin-bottom: 30px;
+			@include xs{
+				width: 100%;
+				text-align: center;
+				.generalButton{
+					margin: 20px auto;
+				}
 			}
 		}
 		.chartSectionPartCard{
 			width: 40%;
+			@include xs{
+				width: 100%;
+			}
 		}
 		.chartSectionPartCard{
 			display: flex;
@@ -695,24 +803,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			justify-content: space-between;
 			.generalCardParent{
 				padding: 25px 20px 25px 60px;
-				border-radius: 15px;
-				box-shadow: 0px 0px 50px -20px rgba(0, 26, 102, 0.3);
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: center;
 				&:nth-of-type(2){
-					margin: 20px 0;
 					position: relative;
 					right: -100px;
 					span{
-						background-color: #3570ff;
+						background-color: $mainColor;
 					}
 					
 				}
 				&:nth-of-type(1){
 					span{
-						background-color: #17283b;
+						background-color: $mainColorDark;
 						svg{
 
 						}
@@ -720,34 +825,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				}
 				&:nth-of-type(3){
 					span{
-						background-color: #ebecf2;
+						background-color: $offColor;
 					}
 				}
 				span{
 					display: flex;
-					padding: 15px;
-					border-radius: 10px;
 					width: 60px;
 					height: 60px;
 				}
 				.mainParagraph{
-					margin: 0;
 					width: calc(100% - 80px);
-					color: #000;
+					color: $mainColorDark;
 					font-weight: 300;
-					font-size: 12px;
 				}
 			}
 		}
 	}
 }
 
+
+
+
+/******  ok  ********/
 .homePageCommentsBoxParent{
-	margin-top: 80px;
 	.homePageCommentsBox{
-		.mainHeading{
-			text-align: center;
-		}
 		.commentsBoxParent{
 			display: flex;
 			flex-wrap: wrap;
@@ -756,12 +857,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			padding: 50px 0;
 			.commentBoxCard{
 				width: 30%;
-				background-color: #ebecf2;
-				border-radius: 15px;
-				padding: 25px;
 				.mainParagraph{
 					line-height: 25px;
-					margin: 25px 0;
 				}
 				.commentHeader{
 					display: flex;
@@ -774,7 +871,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 						height: auto;
 					}
 					.innerCommentHeader{
-
 						span{
 							display: block;
 							font-size: 13px;
@@ -782,7 +878,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 						width: calc(100% - 80px);
 						.cmName{
 							font-weight: 700;
-							color: #454266;
+							color: $textColorLight;
 						}
 						.cmSide{
 							font-weight: 300;
@@ -794,25 +890,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 	}
 }
+
+
+
+/*****   ok  *******/
 .askDoctorParent{
-	margin-top: 80px;
-	// &::after{
-	// 	position: absolute;
-    // content: "";
-	// background-image: url("img/wave.svg");
-    // width: 100%;
-    // height: 100%;
-    // z-index: 999;
-    // left: 0;
-    // right: 0;
-    // top: 0;
-    // bottom: 0;
-    // object-fit: cover;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-attachment: fixed;
-    // background-position: 100% !important;
-	// }
 	.askDoctor{
 		position: relative;
 	}
@@ -828,29 +910,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		opacity: 0.1;
 	}
 	.askDoctor{
-		background-color: #112437;
-		text-align: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 80px;
 		border-radius: 20px;
 		h2{
-			color: #fff;
 			position: relative;
 		}
 		span{
-			color: #fff;
-			font-size: 12.5px;
-			font-weight: 300;
 			position: relative;
 		}
-		.btnHasBg {
+		.generalButton{
 			margin: 30px auto;
 			position: relative;
 		}
 	}
 }
+
+
+
+
+
 .generalFooterParent{
 	margin: 80px 0;
 	.generalfooter{
@@ -877,6 +957,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				li{
 					list-style: none;
 					line-height: 30px;
+					padding-right: 0;
+					&::before{
+						display: none;
+					}
 					a{
 						color: #8f8f8f;
 						transition: all 0.3s;

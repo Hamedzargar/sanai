@@ -1,30 +1,107 @@
-$mainTextColor : #2C2C2C;
-$secondTextColor : #3C3C3C;
-$greyColor : #797979;
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebboldfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebboldfanum.ttf') format('truetype');
+}
 
-@mixin displayer{
-	opacity: 1;
-	visibility: visible;
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 100;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebthinfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebthinfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebthinfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebthinfanum.ttf') format('truetype');
 }
-@mixin displayerI{
-	opacity: 1 !important;
-	visibility: visible !important;
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanweblightfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanweblightfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanweblightfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanweblightfanum.ttf') format('truetype');
 }
-@mixin hider{
-	opacity: 0;
-	visibility: hidden;
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebregularfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebregularfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebregularfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebregularfanum.ttf') format('truetype');
 }
-@mixin hiderI{
-	opacity: 0 !important;
-	visibility: hidden !important;
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebmediumfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebmediumfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebmediumfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebmediumfanum.ttf') format('truetype');
 }
-@mixin trDisplayer{
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebextraboldfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebextraboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebextraboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebextraboldfanum.ttf') format('truetype');
 }
-@mixin sbflex{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebblackfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebblackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebblackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebblackfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekanfn;
+	font-style: normal;
+	font-weight: 950;
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebextrablackfanum.eot');
+	src: url('fonts/iranyekanfn/fonts/eot/iranyekanwebextrablackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/iranyekanfn/fonts/woff/iranyekanwebextrablackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/iranyekanfn/fonts/ttf/iranyekanwebextrablackfanum.ttf') format('truetype');
+}
+
+
+//Text Colors
+$textColorDark: #112437;
+$textColorLowSat: #2e3236;
+$textColorSemi: #1c3c5c;
+$textColorLight: #395470;
+$textColorLighter: #8f8f8f;
+
+//Main Colors
+$mainColor: #3570ff;
+$mainColorDark: #112437;
+$lowSatColor: #6490f7;
+$offColor: #ebecf2;
+
+//Gradient Colors
+$backColorDark: #ebecf2;
+$backColorLight: #f5f6fb;
+$backColorDark2: #112437;
+$backColorLight2: #1e4266;
+
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
 }

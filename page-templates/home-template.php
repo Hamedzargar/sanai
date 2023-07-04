@@ -36,7 +36,7 @@ get_header();
             <img src="<?php bloginfo('template_directory') ?>/img/11.jpg" alt="">
         </div>
     </div>
-    <div class="homePageCatSectionParent">
+    <div class="homePageCatSectionParent highMargined">
         <div class="homePageCatSection mainView">
             <div class="headerTitlePart">
                 <span>کلینیک فیزیوتراپی سنایی در نازی آباد؛ طرف قرارداد با تمام بیمه‌ها</span>
@@ -65,13 +65,13 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageBimehParent">
+    <div class="homePageBimehParent highMargined">
         <div class="homePageBimeh mainView">
             <h2>کلینیک فیزیوتراپی سنایی<br>طرف قرارداد با کلیه بیمه‌های ایران</h2>
             <p>طرف قرارداد با بیمه های تامین اجتماعی و خدمات درمانی و ارتش و با بیمه های تکمیلی پارسیان، دانا،البرز ،آسیا، تجارت نو،ملت،معلم،SOS،نوین،آتیه سازان حافظ،بیمه دی،بیمه کوثر،البرز،صندوق بازنشستگی صنعت نفت ،شهرداری</p>
         </div>
     </div>
-    <div class="homePageServiceBoxParent">
+    <div class="homePageServiceBoxParent highMargined">
         <div class="homePageServiceBox mainView">
             <div class="serviceBoxParent box1">
                 <img src="<?php bloginfo('template_directory') ?>/img/bone-.png" alt="">

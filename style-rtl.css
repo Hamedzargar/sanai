@@ -1433,4 +1433,101 @@ select option {
   color: #fff;
   font-size: 10px;
   font-weight: 200;
+}
+
+.aboutUsPageBack .aboutUsPage .aboutUsFirstSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstRight {
+  width: 34%;
+}
+@media screen and (max-width: 480px) {
+  .aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstRight {
+    width: 100%;
+  }
+}
+.aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft {
+  width: 58%;
+}
+@media screen and (max-width: 480px) {
+  .aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft .aboutUsFirstLeftHead {
+    text-align: center;
+  }
+}
+.aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft a {
+  padding: 15px 30px;
+}
+@media screen and (max-width: 480px) {
+  .aboutUsPageBack .aboutUsPage .serviceBoxParent {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.contactPageBack .contactPage .contactFirstSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactPageBack .contactPage .FirstSectionRight {
+  width: 50%;
+}
+@media screen and (max-width: 480px) {
+  .contactPageBack .contactPage .FirstSectionRight {
+    width: 100%;
+  }
+}
+.contactPageBack .contactPage .FirstSectionLeft {
+  width: 38%;
+}
+@media screen and (max-width: 480px) {
+  .contactPageBack .contactPage .FirstSectionLeft {
+    width: 100%;
+  }
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 480px) {
+  .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs {
+    width: 90%;
+    margin: 10px 0 !important;
+  }
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection {
+  display: flex;
+  padding: 15px 0;
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection span {
+  padding-right: 6px;
+  font-weight: 500;
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection svg {
+  fill: #ebecf2;
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection {
+  display: flex;
+  flex-direction: column;
+}
+.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection span {
+  font-weight: 300;
 }/*# sourceMappingURL=style-rtl.css.map */

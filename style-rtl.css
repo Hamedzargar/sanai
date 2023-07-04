@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mediumMargined {
-  margin: 15px 0;
+  margin: 15px 0 !important;
 }
 
 .highMargined {
@@ -180,7 +180,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .extraHighMargined {
-  margin: 60px 0;
+  margin: 80px 0;
+}
+@media screen and (max-width: 480px) {
+  .extraHighMargined {
+    margin: 50px 0;
+  }
 }
 
 .lowPadding {
@@ -193,6 +198,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .highPadding {
   padding: 30px;
+}
+
+.ExtraHighPadding {
+  padding: 80px;
 }
 
 .sectionPadding {
@@ -212,13 +221,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .generalHeading h1, .generalHeading h2, .generalHeading h3, .generalHeading h4, .generalHeading h5, .generalHeading h6 {
-  line-height: 60px;
+  line-height: 60px !important;
   word-spacing: -5px;
-  font-size: 30px;
+  font-size: 30px !important;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .generalHeading h1, .generalHeading h2, .generalHeading h3, .generalHeading h4, .generalHeading h5, .generalHeading h6 {
+    font-size: 20px !important;
+    line-height: 40px !important;
+  }
 }
 
 .bigHeading h1, .bigHeading h2, .bigHeading h3, .bigHeading h4, .bigHeading h5, .bigHeading h6 {
-  font-size: 45px;
+  font-size: 45px !important;
+}
+@media screen and (max-width: 480px) {
+  .bigHeading h1, .bigHeading h2, .bigHeading h3, .bigHeading h4, .bigHeading h5, .bigHeading h6 {
+    font-size: 26px !important;
+  }
 }
 
 .mediumWeight {
@@ -238,11 +259,12 @@ p {
   text-align: justify;
 }
 
-.lightParagraph {
+.mainParagraph {
   font-size: 13.5px;
   color: #8f8f8f;
   line-height: 30px;
   margin: 0;
+  font-weight: 400;
 }
 
 .lighterText {
@@ -271,8 +293,12 @@ p {
   border-radius: 5px;
 }
 
-.highRadius {
+.mediumRadius {
   border-radius: 10px;
+}
+
+.highRadius {
+  border-radius: 20px;
 }
 
 .darkBorder {
@@ -295,6 +321,18 @@ p {
 }
 .gradient2 .bottomBorder {
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+.mainBoxBack {
+  background-color: #3570ff;
+}
+
+.darkBoxBack {
+  background-color: #112437;
+}
+
+.lightBoxBack {
+  background-color: #ebecf2;
 }
 
 .boxShadow {
@@ -532,10 +570,11 @@ select option {
   background-color: #3570ff;
   border-radius: 5px;
   border: none;
-  color: #fff;
+  color: #fff !important;
   position: relative;
   padding-left: 40px;
   cursor: pointer;
+  display: block;
 }
 .generalButton::before {
   content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
@@ -565,11 +604,12 @@ select option {
 }
 
 .noBorderButton {
-  border: none;
+  border: none !important;
+  padding-right: 0;
 }
 
 .outlineButton {
-  background-color: transparent;
+  background-color: transparent !important;
   color: #112437 !important;
   border: 1px solid #112437;
 }
@@ -696,21 +736,6 @@ select option {
   color: #fff !important;
 }
 
-.mainHeading {
-  font-size: 30px;
-  line-height: 60px;
-  word-spacing: -5px;
-  margin: 0;
-}
-
-.mainParagraph {
-  font-size: 13.5px;
-  color: #8f8f8f;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0;
-}
-
 /**********************************************     Header Desktop       ****************************************************************/
 .mainHeaderParent {
   padding: 10px 0;
@@ -783,10 +808,11 @@ select option {
   margin: 0 12px;
   display: inline-block;
 }
+.desktopMenu ul li::before {
+  display: none;
+}
 .desktopMenu ul li a {
   font-size: 13.5px;
-  font-weight: 500;
-  color: #595959;
 }
 .desktopMenu ul .menu-item-has-children {
   position: relative;
@@ -892,7 +918,7 @@ select option {
   stroke: #fff;
 }
 
-/*******************************************   Home Page    ********************************************/
+/*******************************************   Home Page  ok   ********************************************/
 .homePageSliderSectionParent .homePageSliderSection {
   display: flex;
   flex-wrap: wrap;
@@ -902,17 +928,35 @@ select option {
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne {
   width: 45%;
 }
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne {
+    width: 100%;
+    order: 2;
+    margin-top: 30px;
+  }
+}
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne span {
   font-size: 16.5px;
   color: #3570ff;
   font-weight: 400;
 }
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne span {
+    display: block;
+    text-align: center;
+  }
+}
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne h2 {
-  font-size: 45px;
-  margin: 10px 0;
   line-height: 70px;
   margin-top: 0;
+  margin-bottom: 10px;
   word-spacing: -8px;
+}
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne h2 {
+    line-height: 50px !important;
+    text-align: center;
+  }
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart {
   display: flex;
@@ -920,11 +964,31 @@ select option {
   justify-content: space-between;
   padding-left: 35px;
 }
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft {
   width: 88%;
   order: 2;
   padding-right: 20px;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft {
+    padding-right: 5px;
+    width: 100%;
+  }
+}
+.homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft .noBorderButton {
+  padding-right: 20px;
+}
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft p {
+    text-align: center;
+  }
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft::after {
   position: absolute;
@@ -936,19 +1000,20 @@ select option {
   top: 15px;
   left: 100%;
 }
-.homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft p {
-  font-size: 13.5px;
-  color: #8f8f8f;
-  font-weight: 400;
-  line-height: 30px;
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft::after {
+    display: none;
+  }
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft .sliderSectionBtnPart {
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
 }
-.homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft .sliderSectionBtnPart .btnHasBg {
-  margin-left: 15px;
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft .sliderSectionBtnPart {
+    justify-content: space-between;
+  }
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartRight {
   width: 12%;
@@ -970,6 +1035,18 @@ select option {
   border-radius: 20px;
   overflow: hidden;
 }
+@media screen and (max-width: 480px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemTwo {
+    width: 100%;
+    order: 1;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemTwo {
+    height: 350px;
+  }
+}
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemTwo img {
   display: block;
   width: 100%;
@@ -978,18 +1055,15 @@ select option {
      object-fit: cover;
 }
 
+/*********** ok  ****************/
 .homePageCatSectionParent {
-  margin-top: 80px;
   padding: 50px 0;
-  background-color: #112437;
-}
-.homePageCatSectionParent .headerTitlePart {
-  text-align: center;
 }
 .homePageCatSectionParent .headerTitlePart span {
   color: #fff;
   font-size: 14.5px;
   font-weight: 300;
+  line-height: 30px;
 }
 .homePageCatSectionParent .catLogoPart {
   display: flex;
@@ -1005,11 +1079,26 @@ select option {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 480px) {
+  .homePageCatSectionParent .catLogoPart .mainIconicCat {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  .homePageCatSectionParent .catLogoPart .mainIconicCat:last-child {
+    margin: auto;
+    margin-bottom: 0;
+  }
+}
 .homePageCatSectionParent .catLogoPart .mainIconicCat img {
   width: 90px;
   transform: scale(0.8);
   opacity: 0.7;
   transition: all 0.3s;
+}
+@media screen and (max-width: 480px) {
+  .homePageCatSectionParent .catLogoPart .mainIconicCat img {
+    opacity: 1;
+  }
 }
 .homePageCatSectionParent .catLogoPart .mainIconicCat span {
   opacity: 0;
@@ -1021,6 +1110,13 @@ select option {
   display: block;
   padding-top: 20px;
 }
+@media screen and (max-width: 480px) {
+  .homePageCatSectionParent .catLogoPart .mainIconicCat span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
 .homePageCatSectionParent .catLogoPart .mainIconicCat:hover img {
   transform: scale(1);
   opacity: 1;
@@ -1031,34 +1127,34 @@ select option {
   transform: translateY(0);
 }
 
-.homePageBimehParent {
-  margin-top: 80px;
-}
+/******** ok  *************/
 .homePageBimehParent .homePageBimeh {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.homePageBimehParent .homePageBimeh h2 {
-  width: 48%;
-  font-size: 30px;
-  line-height: 60px;
-  word-spacing: -5px;
-  margin: 0;
+@media screen and (max-width: 480px) {
+  .homePageBimehParent .homePageBimeh {
+    text-align: center;
+  }
 }
-.homePageBimehParent .homePageBimeh p {
+.homePageBimehParent .homePageBimeh .generalHeading, .homePageBimehParent .homePageBimeh p {
   width: 48%;
-  font-size: 13.5px;
-  color: #8f8f8f;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0;
+}
+@media screen and (max-width: 992px) {
+  .homePageBimehParent .homePageBimeh .generalHeading, .homePageBimehParent .homePageBimeh p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageBimehParent .homePageBimeh .generalHeading h2 {
+    font-size: 23px !important;
+    line-height: 50px !important;
+  }
 }
 
-.homePageServiceBoxParent {
-  margin-top: 80px;
-}
+/************ ok  ****************/
 .homePageServiceBoxParent .homePageServiceBox {
   display: flex;
   flex-wrap: wrap;
@@ -1070,39 +1166,55 @@ select option {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rebeccapurple;
-  border-radius: 20px;
   padding: 40px 30px 30px 50px;
+}
+@media screen and (max-width: 768px) {
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent {
+    width: 48%;
+  }
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent:last-child {
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent:first-child {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent {
+    padding: 20px;
+  }
 }
 .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent img {
   max-width: 50px;
   max-height: 50px;
 }
 .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent h3 {
-  font-size: 18px;
-  font-weight: 700;
   color: #fff;
   margin-top: 30px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 480px) {
+  .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent h3 {
+    margin-top: 10px;
+  }
+}
 .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent p {
-  font-size: 12.5px;
   color: #fff;
-  font-weight: 300;
-  margin: 0;
   line-height: 23px;
+  font-weight: 300;
 }
-.homePageServiceBoxParent .homePageServiceBox .serviceBoxParent .generalBtn {
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0;
-  margin-top: 30px;
-}
-.homePageServiceBoxParent .homePageServiceBox .serviceBoxParent .generalBtn span {
+.homePageServiceBoxParent .homePageServiceBox .box1 .generalButton, .homePageServiceBoxParent .homePageServiceBox .box2 .generalButton {
   color: #fff !important;
 }
-.homePageServiceBoxParent .homePageServiceBox .serviceBoxParent .generalBtn span svg {
-  fill: #fff !important;
+.homePageServiceBoxParent .homePageServiceBox .box1 .generalButton::before, .homePageServiceBoxParent .homePageServiceBox .box2 .generalButton::before {
+  content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
 }
 .homePageServiceBoxParent .homePageServiceBox .box1 {
   background-color: #112437;
@@ -1113,22 +1225,11 @@ select option {
 .homePageServiceBoxParent .homePageServiceBox .box3 {
   background-color: #ebecf2;
 }
-.homePageServiceBoxParent .homePageServiceBox .box3 h3 {
-  color: #23262c;
-}
-.homePageServiceBoxParent .homePageServiceBox .box3 p {
-  color: #23262c;
-}
-.homePageServiceBoxParent .homePageServiceBox .box3 .generalBtn span {
-  color: #23262c !important;
-}
-.homePageServiceBoxParent .homePageServiceBox .box3 .generalBtn span svg {
-  fill: #23262c !important;
+.homePageServiceBoxParent .homePageServiceBox .box3 h3, .homePageServiceBoxParent .homePageServiceBox .box3 p {
+  color: #112437;
 }
 
-.homePageAboutSectionParent {
-  margin-top: 80px;
-}
+/************  ok  *************/
 .homePageAboutSectionParent .homePageAboutSection {
   display: flex;
   flex-wrap: wrap;
@@ -1138,29 +1239,46 @@ select option {
 .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart, .homePageAboutSectionParent .homePageAboutSection .aboutSectionImgPart {
   width: 48%;
 }
+@media screen and (max-width: 480px) {
+  .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart, .homePageAboutSectionParent .homePageAboutSection .aboutSectionImgPart {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart {
+    order: 1;
+  }
+  .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart .generalHeading {
+    margin: 30px 0;
+    margin-top: 0;
+  }
+  .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart .generalButton {
+    margin: 30px auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageAboutSectionParent .homePageAboutSection .aboutSectionImgPart {
+    order: 2;
+  }
+}
 .homePageAboutSectionParent .homePageAboutSection .aboutSectionImgPart img {
   display: block;
   margin-right: auto;
   border-radius: 20px;
 }
-.homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart h2 {
-  margin-bottom: 30px;
-}
 
+/*********** ok  ***********/
 .homePageCountNumParent {
   padding: 70px 0;
-  margin-top: 80px;
   background-color: #ebecf2;
 }
-.homePageCountNumParent .sectionHeadimg {
-  text-align: center;
-}
-.homePageCountNumParent .sectionHeadimg h2 {
+.homePageCountNumParent h2 {
   margin-bottom: 20px;
 }
-.homePageCountNumParent .sectionHeadimg span {
-  font-size: 12.5px;
+.homePageCountNumParent .mainParagraph {
   line-height: 25px;
+  font-weight: 300 !important;
 }
 .homePageCountNumParent .homePageCountNum {
   display: flex;
@@ -1169,8 +1287,20 @@ select option {
   align-items: center;
   padding: 60px 0px;
 }
+@media screen and (max-width: 480px) {
+  .homePageCountNumParent .homePageCountNum {
+    padding: 0;
+    justify-content: space-between;
+  }
+}
 .homePageCountNumParent .homePageCountNum .outerCountNum {
   width: 25%;
+}
+@media screen and (max-width: 480px) {
+  .homePageCountNumParent .homePageCountNum .outerCountNum {
+    width: 48%;
+    position: static;
+  }
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum {
   border-radius: 100%;
@@ -1179,9 +1309,23 @@ select option {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
-  text-align: center;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum {
+    position: static;
+    width: 180px;
+    height: 180px;
+  }
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum:nth-child(1), .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum {
+    width: 150px;
+    height: 150px;
+  }
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum span {
   display: flex;
@@ -1191,12 +1335,20 @@ select option {
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numbePart {
   font-size: 50px;
-  font-family: cursive;
+}
+@media screen and (max-width: 480px) {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numbePart {
+    font-size: 25px;
+  }
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .descPart {
-  font-size: 11.5px;
   font-weight: 300;
   margin-top: 15px;
+}
+@media screen and (max-width: 480px) {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .descPart {
+    margin-top: 5px;
+  }
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle1, .homePageCountNumParent .homePageCountNum .outerCountNum .circle3 {
   top: -25px;
@@ -1212,24 +1364,22 @@ select option {
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle2 {
   left: -25PX;
-  border: 1px solid #3471fe;
+  border: 1px solid #3570ff;
   z-index: 98;
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle3 {
   right: -25PX;
-  background-color: #3471fe;
+  background-color: #3570ff;
   color: #fff;
   z-index: 99;
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle4 {
   right: -65px;
-  border: 1px solid #3471fe;
+  border: 1px solid #3570ff;
   z-index: 98;
 }
 
-.homePageChartSectionParent {
-  margin-top: 80px;
-}
+/***************  ok  *********************/
 .homePageChartSectionParent .homePageChartSection {
   display: flex;
   flex-wrap: wrap;
@@ -1239,11 +1389,22 @@ select option {
 .homePageChartSectionParent .homePageChartSection .chartSectionPartTxt {
   width: 48%;
 }
-.homePageChartSectionParent .homePageChartSection .chartSectionPartTxt h2 {
-  margin-bottom: 30px;
+@media screen and (max-width: 480px) {
+  .homePageChartSectionParent .homePageChartSection .chartSectionPartTxt {
+    width: 100%;
+    text-align: center;
+  }
+  .homePageChartSectionParent .homePageChartSection .chartSectionPartTxt .generalButton {
+    margin: 20px auto;
+  }
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard {
   width: 40%;
+}
+@media screen and (max-width: 480px) {
+  .homePageChartSectionParent .homePageChartSection .chartSectionPartCard {
+    width: 100%;
+  }
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard {
   display: flex;
@@ -1252,15 +1413,12 @@ select option {
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent {
   padding: 25px 20px 25px 60px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 50px -20px rgba(0, 26, 102, 0.3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(2) {
-  margin: 20px 0;
   position: relative;
   right: -100px;
 }
@@ -1268,32 +1426,23 @@ select option {
   background-color: #3570ff;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(1) span {
-  background-color: #17283b;
+  background-color: #112437;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(3) span {
   background-color: #ebecf2;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent span {
   display: flex;
-  padding: 15px;
-  border-radius: 10px;
   width: 60px;
   height: 60px;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent .mainParagraph {
-  margin: 0;
   width: calc(100% - 80px);
-  color: #000;
+  color: #112437;
   font-weight: 300;
-  font-size: 12px;
 }
 
-.homePageCommentsBoxParent {
-  margin-top: 80px;
-}
-.homePageCommentsBoxParent .homePageCommentsBox .mainHeading {
-  text-align: center;
-}
+/******  ok  ********/
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent {
   display: flex;
   flex-wrap: wrap;
@@ -1303,13 +1452,9 @@ select option {
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard {
   width: 30%;
-  background-color: #ebecf2;
-  border-radius: 15px;
-  padding: 25px;
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .mainParagraph {
   line-height: 25px;
-  margin: 25px 0;
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .commentHeader {
   display: flex;
@@ -1331,16 +1476,14 @@ select option {
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .commentHeader .innerCommentHeader .cmName {
   font-weight: 700;
-  color: #454266;
+  color: #395470;
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .commentHeader .innerCommentHeader .cmSide {
   font-weight: 300;
   margin-top: 5px;
 }
 
-.askDoctorParent {
-  margin-top: 80px;
-}
+/*****   ok  *******/
 .askDoctorParent .askDoctor {
   position: relative;
 }
@@ -1357,25 +1500,18 @@ select option {
   opacity: 0.1;
 }
 .askDoctorParent .askDoctor {
-  background-color: #112437;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px;
   border-radius: 20px;
 }
 .askDoctorParent .askDoctor h2 {
-  color: #fff;
   position: relative;
 }
 .askDoctorParent .askDoctor span {
-  color: #fff;
-  font-size: 12.5px;
-  font-weight: 300;
   position: relative;
 }
-.askDoctorParent .askDoctor .btnHasBg {
+.askDoctorParent .askDoctor .generalButton {
   margin: 30px auto;
   position: relative;
 }
@@ -1410,6 +1546,10 @@ select option {
 .generalFooterParent .generalfooter .generalFooterCl ul li {
   list-style: none;
   line-height: 30px;
+  padding-right: 0;
+}
+.generalFooterParent .generalfooter .generalFooterCl ul li::before {
+  display: none;
 }
 .generalFooterParent .generalfooter .generalFooterCl ul li a {
   color: #8f8f8f;

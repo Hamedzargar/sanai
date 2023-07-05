@@ -1645,7 +1645,6 @@ select option {
   flex-direction: column;
   margin: 0 15px;
   padding: 30px 20px;
-  border-radius: 20px;
 }
 @media screen and (max-width: 480px) {
   .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs {

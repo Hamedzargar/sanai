@@ -236,7 +236,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				overflow: hidden;
                 li{
                     padding: 0;
-					border-bottom: 1px solid #3471fe;
+					border-bottom: 1px solid $offColor;
                     margin: 0;
                     transition: all 0.3s;
                     &:last-child{
@@ -250,9 +250,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
                         display: block;
                         overflow: hidden;
                         border-radius: 20px;
+						transition: all 0.3s;
                     }
                     &:hover{
-                        background-color: #f2f2f2;
+                        background-color: $mainColor;
+						a{
+							color: #fff;
+						}
                     }
                 } 
                 .menu-item-has-children{
@@ -688,7 +692,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		padding: 60px 0px;
 		@include xs{
-			padding: 0;
+			padding: 20px 0;
 			justify-content: space-between;
 		}
 		.outerCountNum{
@@ -813,6 +817,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					span{
 						background-color: $mainColor;
 					}
+					@include xs{
+						position: static;
+					}
 					
 				}
 				&:nth-of-type(1){
@@ -857,6 +864,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			padding: 50px 0;
 			.commentBoxCard{
 				width: 30%;
+				@include xs{
+					width: 100%;
+					margin-bottom: 20px;
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
 				.mainParagraph{
 					line-height: 25px;
 				}

@@ -1528,7 +1528,7 @@ select option {
   width: 18%;
 }
 .generalFooterParent .generalfooter .generalFooterCl:nth-child(1) {
-  width: 28%;
+  width: 40%;
 }
 .generalFooterParent .generalfooter .generalFooterCl h3 {
   font-size: 20px;
@@ -1538,6 +1538,7 @@ select option {
   text-align: justify;
   line-height: 25px;
   font-size: 13px;
+  width: 55%;
 }
 .generalFooterParent .generalfooter .generalFooterCl ul {
   padding: 0;
@@ -1558,6 +1559,15 @@ select option {
 .generalFooterParent .generalfooter .generalFooterCl ul li a:hover {
   color: #4e4e4e;
 }
+.generalFooterParent .generalfooter .generalFooterCl:nth-child(2) {
+  width: 12%;
+}
+.generalFooterParent .generalfooter .generalFooterCl:nth-child(3) {
+  width: 12%;
+}
+.generalFooterParent .generalfooter .generalFooterCl:nth-child(4) {
+  width: 12%;
+}
 
 .copyRightParent {
   background-color: #112437;
@@ -1568,6 +1578,22 @@ select option {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.copyRightParent .copyRight .generalCopyRightCl:nth-child(2) {
+  display: flex;
+}
+.copyRightParent .copyRight .generalCopyRightCl a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  background-color: #28394b;
+  border-radius: 100%;
+}
+.copyRightParent .copyRight .generalCopyRightCl a svg {
+  fill: #ebecf2;
 }
 .copyRightParent .copyRight .generalCopyRightCl span {
   color: #fff;

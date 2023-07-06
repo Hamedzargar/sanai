@@ -847,7 +847,7 @@ select option {
 }
 .desktopMenu ul .menu-item-has-children ul li {
   padding: 0;
-  border-bottom: 1px solid #3471fe;
+  border-bottom: 1px solid #ebecf2;
   margin: 0;
   transition: all 0.3s;
 }
@@ -861,9 +861,13 @@ select option {
   display: block;
   overflow: hidden;
   border-radius: 20px;
+  transition: all 0.3s;
 }
 .desktopMenu ul .menu-item-has-children ul li:hover {
-  background-color: #f2f2f2;
+  background-color: #3570ff;
+}
+.desktopMenu ul .menu-item-has-children ul li:hover a {
+  color: #fff;
 }
 .desktopMenu ul .menu-item-has-children ul .menu-item-has-children {
   display: flex;
@@ -1289,7 +1293,7 @@ select option {
 }
 @media screen and (max-width: 480px) {
   .homePageCountNumParent .homePageCountNum {
-    padding: 0;
+    padding: 20px 0;
     justify-content: space-between;
   }
 }
@@ -1425,6 +1429,11 @@ select option {
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(2) span {
   background-color: #3570ff;
 }
+@media screen and (max-width: 480px) {
+  .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(2) {
+    position: static;
+  }
+}
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(1) span {
   background-color: #112437;
 }
@@ -1452,6 +1461,15 @@ select option {
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard {
   width: 30%;
+}
+@media screen and (max-width: 480px) {
+  .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard:last-child {
+    margin-bottom: 0;
+  }
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .mainParagraph {
   line-height: 25px;

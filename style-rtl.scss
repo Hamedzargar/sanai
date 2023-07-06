@@ -954,7 +954,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		.generalFooterCl{
 			width: 18%;
 			&:nth-child(1){
-				width: 28%;
+				width: 40%;
 			}
 			h3{
 				font-size: 20px;
@@ -964,6 +964,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				text-align: justify;
 				line-height: 25px;
 				font-size: 13px;
+				width: 55%;
 			}
 			ul{
 				padding: 0;
@@ -984,6 +985,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					}
 				}
 			}
+			&:nth-child(2){
+				width: 12%;
+			}
+			&:nth-child(3){
+				width: 12%;
+			}
+			&:nth-child(4){
+				width: 12%;
+			}
 		}
 	}
 }
@@ -996,6 +1006,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		align-items: center;
 		.generalCopyRightCl{
+			&:nth-child(2){
+				display: flex;
+			}
+			a{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				margin: 0 5px;
+				background-color: #28394b;
+				border-radius: 100%;
+				svg{
+					fill: #ebecf2;
+				}
+			}
 			span{
 				color: #fff;
 				font-size: 10px;

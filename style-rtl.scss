@@ -133,15 +133,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /**********************************************     Header Desktop       ****************************************************************/
 
 .mainHeaderParent{
-    padding: 10px 0;
     background-color: #fff;
+	padding: 5px 0;
     .mainHeader {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-		position: absolute;
-		left: 0;
-		right: 0;
         .headerLogo{
 			display: flex;
 			align-items: center;
@@ -151,10 +148,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
         }
         .headerIcon{
-            display: flex;
+			display: flex;
             align-items: center;
             .mobileMenuIcon{
-                display: none;
+				display: none;
                 width: 30px;
                 height: 30px;
                 border: 1px solid #d3d3d3;
@@ -167,6 +164,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				@include xs{
 					display: flex;
 				}
+
             }
             .mainSearchIcon{
 				display: flex;
@@ -236,7 +234,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				overflow: hidden;
                 li{
                     padding: 0;
-					border-bottom: 1px solid $offColor;
+					border-bottom: 1px solid $backColorDark;
                     margin: 0;
                     transition: all 0.3s;
                     &:last-child{
@@ -309,6 +307,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		padding: 2px 0;
 		align-items: center;
+		@include xs{
+			display: none;
+		}
 		.topHeaderLink{
 			a{
 				font-size: 12.5px;
@@ -334,6 +335,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 .homePageSliderSectionParent{
+	padding-top: 0;
 	.homePageSliderSection{
 		display: flex;
 		flex-wrap: wrap;
@@ -348,7 +350,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			}
 			span{
 				font-size: 16.5px;
-				color: #3570ff;
+				color: $mainColor;
 				font-weight: 400;
 				@include xs{
 					display: block;
@@ -431,7 +433,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 		.homePageSliderSectionFlexItemTwo{
 			width: 45%;
-			height: 600px;
+			height: 450px;
 			border-radius: 20px;
 			overflow: hidden;
 			@include xs{
@@ -457,15 +459,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*********** ok  ****************/
 
 .homePageCatSectionParent{
-    padding: 50px 0;
-	.headerTitlePart{
-		span{
-			color: #fff;
-			font-size: 14.5px;
-			font-weight: 300;
-			line-height: 30px;
-		}
-	}
 	.catLogoPart{
 		display: flex;
 		flex-wrap: wrap;
@@ -500,7 +493,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				visibility: hidden;
 				transform: translateY(5px);
 				transition: all 0.3s;
-				color: #fff;
 				font-size: 12.5px;
 				display: block;
 				padding-top: 20px;
@@ -540,14 +532,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			width: 48%;
 			@include md{
 				width: 100%;
-			}
-		}
-		.generalHeading{
-			h2{
-				@include xs{
-					font-size: 23px !important;
-					line-height: 50px !important;
-				}
 			}
 		}
 	}
@@ -590,7 +574,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				max-height: 50px;
 			}
 			h3{
-				color: #fff;
 				margin-top: 30px;
 				margin-bottom: 10px;
 				@include xs{
@@ -598,32 +581,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				}
 			}
 			p{
-				color: #fff;
 				line-height: 23px;
 				font-weight: 300;
-			}
-		}
-		.box1 , .box2{
-			.generalButton{
-				color: #fff !important;
-				&::before{
-					content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
-				}
-			}
-		}
-
-		.box1{
-			background-color: $mainColorDark;
-
-		}
-		.box2{
-			background-color: $mainColor;
-
-		}
-		.box3{
-			background-color: $offColor;
-			h3,p{
-				color: $textColorDark;
 			}
 		}
 	}
@@ -648,7 +607,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			@include xs{
 				order: 1;
 				.generalHeading {
-					margin: 30px 0;
+					margin: 0;
 					margin-top: 0;
 				}
 				.generalButton{
@@ -676,8 +635,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 .homePageCountNumParent{
-	padding: 70px 0;
-    background-color: $offColor;
 	h2{
 		margin-bottom: 20px;
 	}
@@ -690,9 +647,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		padding: 60px 0px;
 		@include xs{
-			padding: 20px 0;
 			justify-content: space-between;
 		}
 		.outerCountNum{
@@ -832,7 +787,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				}
 				&:nth-of-type(3){
 					span{
-						background-color: $offColor;
+						background-color: $backColorDark;
 					}
 				}
 				span{
@@ -861,7 +816,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			padding: 50px 0;
 			.commentBoxCard{
 				width: 30%;
 				@include xs{
@@ -927,7 +881,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		border-radius: 20px;
 		h2{
 			position: relative;
 		}

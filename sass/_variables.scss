@@ -80,23 +80,23 @@
 
 
 //Text Colors
-$textColorDark: #112437;
-$textColorLowSat: #2e3236;
-$textColorSemi: #1c3c5c;
-$textColorLight: #395470;
+$textColorDark: #173711;
+$textColorLowSat: #2f362e;
+$textColorSemi: #2e5c1c;
+$textColorLight: #3f7039;
 $textColorLighter: #8f8f8f;
 
 //Main Colors
-$mainColor: #3570ff;
-$mainColorDark: #112437;
-$lowSatColor: #6490f7;
-$offColor: #ebecf2;
+$mainColor: #258a52;
+$mainColorDark: #0d321e;
+$lowSatColor: #65f7a7;
+$offColor: #f3b870;
 
 //Gradient Colors
-$backColorDark: #ebecf2;
-$backColorLight: #f5f6fb;
-$backColorDark2: #112437;
-$backColorLight2: #1e4266;
+$backColorDark: #ecf2eb;
+$backColorLight: #f6fbf5;
+$backColorDark2: #0d321e;
+$backColorLight2: #258a52;
 
 
 @mixin placeholder {

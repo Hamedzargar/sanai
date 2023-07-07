@@ -7,7 +7,7 @@ Template Name: Home Template
 get_header();
 ?>
 
-<div class="homePageSliderSectionParent">
+<div class="homePageSliderSectionParent sectionPadding">
     <div class="homePageSliderSection mainView">
         <div class="homePageSliderSectionFlexItemOne">
             <span>کلینیک سنایی</span>
@@ -28,10 +28,11 @@ get_header();
             <img src="<?php bloginfo('template_directory') ?>/img/11.jpg" alt="">
         </div>
     </div>
-    <div class="homePageCatSectionParent darkBoxBack extraHighMargined">
+</div>
+    <div class="homePageCatSectionParent darkBoxBack sectionPadding">
         <div class="homePageCatSection mainView">
-            <div class="headerTitlePart centeredText">
-                <span>کلینیک فیزیوتراپی سنایی در نازی آباد؛ طرف قرارداد با تمام بیمه‌ها</span>
+            <div class="centeredText">
+                <h2 class="mediumWeight">کلینیک فیزیوتراپی سنایی در نازی آباد؛ طرف قرارداد با تمام بیمه‌ها</h2>
             </div>
             <div class="catLogoPart">
                 <div class="mainIconicCat">
@@ -57,7 +58,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageBimehParent extraHighMargined">
+    <div class="homePageBimehParent sectionPadding">
         <div class="homePageBimeh mainView">
             <div class="generalHeading">
                 <h2>کلینیک فیزیوتراپی سنایی<br>طرف قرارداد با کلیه بیمه‌های ایران</h2>
@@ -65,21 +66,21 @@ get_header();
             <p class="mainParagraph">طرف قرارداد با بیمه های تامین اجتماعی و خدمات درمانی و ارتش و با بیمه های تکمیلی پارسیان، دانا،البرز ،آسیا، تجارت نو،ملت،معلم،SOS،نوین،آتیه سازان حافظ،بیمه دی،بیمه کوثر،البرز،صندوق بازنشستگی صنعت نفت ،شهرداری</p>
         </div>
     </div>
-    <div class="homePageServiceBoxParent extraHighMargined">
+    <div class="homePageServiceBoxParent sectionPadding">
         <div class="homePageServiceBox mainView">
-            <div class="serviceBoxParent highRadius box1">
+            <div class="serviceBoxParent highRadius darkBoxBack box1">
                 <img src="<?php bloginfo('template_directory') ?>/img/bone-.png" alt="">
                 <h3 class="mediumWeight">درمان درد شانه</h3>
                 <p class="smallerText mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
                 <a class="generalButton outlineButton noBorderButton mediumMargined" href="#">دریافت نوبت</a>
             </div>
-            <div class="serviceBoxParent highRadius box2">
+            <div class="serviceBoxParent highRadius mainBoxBack box2">
                 <img src="<?php bloginfo('template_directory') ?>/img/bone-.png" alt="">
                 <h3 class="mediumWeight">درمان درد شانه</h3>
                 <p class="smallerText mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
                 <a class="generalButton outlineButton noBorderButton mediumMargined" href="#">دریافت نوبت</a>
             </div>
-            <div class="serviceBoxParent highRadius box3">
+            <div class="serviceBoxParent highRadius lightBoxBack box3">
                 <img src="<?php bloginfo('template_directory') ?>/img/bone-d.png" alt="">
                 <h3 class="mediumWeight">درمان درد شانه</h3>
                 <p class="smallerText mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
@@ -87,7 +88,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageAboutSectionParent extraHighMargined">
+    <div class="homePageAboutSectionParent sectionPadding">
         <div class="homePageAboutSection mainView">
             <div class="aboutSectionImgPart">
                 <img src="<?php bloginfo('template_directory') ?>/img/222.jpg" alt="">
@@ -101,12 +102,12 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageCountNumParent extraHighMargined">
+    <div class="homePageCountNumParent lightBoxBack sectionPadding">
             <div class="centeredText generalHeading">
                 <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h2>
                 <span class="mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم<br>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
             </div>
-        <div class="homePageCountNum mainView">
+        <div class="homePageCountNum sectionPadding mainView">
             <div class="outerCountNum">
                 <div class="innerCountNum highPadding centeredText circle1">
                     <span class="numbePart">62%</span>
@@ -133,7 +134,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageChartSectionParent extraHighMargined">
+    <div class="homePageChartSectionParent sectionPadding">
         <div class="homePageChartSection mainView">
             <div class="chartSectionPartTxt">
                 <div class="generalHeading highMargined">
@@ -158,12 +159,12 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="homePageCommentsBoxParent extraHighMargined">
+    <div class="homePageCommentsBoxParent sectionPadding">
         <div class="homePageCommentsBox mainView">
             <div class="generalHeading centeredText">
                 <h2>لورم ایپسوم متن ساختگی با تولید<br>لورم ایپسوم متن ساختگی با تولید</h2>
             </div>
-            <div class="commentsBoxParent">
+            <div class="commentsBoxParent highMargined">
                 <div class="lightBoxBack highRadius highPadding commentBoxCard">
                     <div class="commentHeader">
                         <img src="<?php bloginfo('template_directory') ?>/img/33.jpg" alt="">
@@ -218,13 +219,13 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="askDoctorParent extraHighMargined ">
-        <div class="askDoctor gradient2 highRadius ExtraHighPadding centeredText mainView">
+    <div class="askDoctorParent sectionPadding ">
+        <div class="askDoctor darkBoxBack highRadius ExtraHighPadding centeredText mainView">
             <img src="<?php bloginfo('template_directory') ?>/img/Asset.png" alt="">
             <div class="generalHeading">
                 <h2>لورم ایپسوم متن ساختگی با تولید<br>لورم ایپسوم متن ساختگی با تولید</h2>
             </div>
-            <a class="generalButton" href="#">از فیزیوتراپیست بپرسید</a>
+            <a class="generalButton " href="#">از فیزیوتراپیست بپرسید</a>
             <span class="smallText ">پاسخگویی به سئوالات حداکثر دو روز به طول می انجامد</span>
         </div>
     </div>

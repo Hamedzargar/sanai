@@ -11,37 +11,37 @@
 
 ?>
 
-	<footer class="generalFooterParent">
+	<footer class="generalFooterParent sectionPadding lightBoxBack ">
 		<div class="generalfooter mainView">
 			<div class="generalFooterCl">
 				<h3 class="mediumWeight">کلینیک فیزیوتراپی سنایی</h3>
-				<p class="mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
+				<p class="mainParagraph lightText smallText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
 			</div>
 			<div class="generalFooterCl">
 				<h3 class="mediumWeight" >آیتم فوتر تست</h3>
-				<ul>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
+				<ul class="noPadding noMargin">
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
 				</ul>
 			</div>
 			<div class="generalFooterCl">
 				<h3 class="mediumWeight">آیتم فوتر تست</h3>
-				<ul>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
+				<ul class="noPadding noMargin">
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
 				</ul>
 			</div>
 			<div class="generalFooterCl">
 				<h3 class="mediumWeight">آیتم فوتر تست</h3>
-				<ul>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
-					<li><a href="#">تست فوتر</a></li>
+				<ul class="noPadding noMargin">
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
+					<li class="noListStyle"><a href="#">تست فوتر</a></li>
 				</ul>
 			</div>
 		</div>

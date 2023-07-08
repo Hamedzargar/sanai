@@ -38,7 +38,7 @@
 <div class="mainHeaderParent">
 	<div class="mainHeader mainView">
 		<a href="#" class="headerLogo">
-			<object data="<?php echo get_template_directory_uri()?>/img/logo.svg" type="image/svg+xml"></object>
+			<object data="<?php echo get_template_directory_uri()?>/img/logo.svg" type="image/svg+xml" style="height:60px;"></object>
 		</a>
 		<?php
 			wp_nav_menu(

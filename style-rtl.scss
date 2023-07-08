@@ -1078,3 +1078,86 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 	}
 }
+.insuranceIntroBack{
+	padding: 50px 0 0 30px;
+	.insuranceIntro{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.insuranceIntroInfo{
+			width: 55%;
+		}
+		.insuranceIntroImage{
+			position: relative;
+			width: 35%;
+			img{
+				display: block;
+			}
+		}
+	}
+}
+.insuranceDivider{
+	text-align: center;
+	position: relative;
+	img{
+		width: 100px;
+		height: 100px;
+		position: relative;
+	}
+	&::before{
+		content: '';
+		background-color: $mainColor;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: auto;
+		height: 1px;
+	}
+}
+.insuranceSectionBack{
+	.insuranceSection{
+		.generalHeading{
+			h2{
+				font-size: 24px !important;
+				word-spacing: -3px !important;
+				margin-bottom: 30px !important;
+			}
+		}
+		.insuranceSectionInner{
+			.insuranceSectionText{
+				
+			}
+			.insuranceSectionImg{
+
+			}
+		}
+	}
+	
+}
+.insuranceWImage{
+	.insuranceSectionInner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		.insuranceSectionText{
+			width: 60%;	
+		}
+		.insuranceSectionImg{
+			width: 35%;
+		}
+	}
+}
+.insuranceReverse{
+	.insuranceSectionInner{
+		flex-direction: row-reverse;
+	}
+}
+.insuranceNoBack{
+	.insuranceSectionText{
+		background-color: #fff !important;
+	}
+}

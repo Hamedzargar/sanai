@@ -190,6 +190,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.lowSectionPadding {
+  padding: 40px 0;
+}
+@media screen and (max-width: 480px) {
+  .lowSectionPadding {
+    padding: 30px 0;
+  }
+}
+
 .lowPadding {
   padding: 7px;
 }
@@ -1725,4 +1734,71 @@ select option {
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection span {
   font-weight: 300;
+}
+
+.insuranceIntroBack {
+  padding: 50px 0 0 30px;
+}
+.insuranceIntroBack .insuranceIntro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroInfo {
+  width: 55%;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroImage {
+  position: relative;
+  width: 35%;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroImage img {
+  display: block;
+}
+
+.insuranceDivider {
+  text-align: center;
+  position: relative;
+}
+.insuranceDivider img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.insuranceDivider::before {
+  content: "";
+  background-color: #258a52;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 1px;
+}
+
+.insuranceSectionBack .insuranceSection .generalHeading h2 {
+  font-size: 24px !important;
+  word-spacing: -3px !important;
+  margin-bottom: 30px !important;
+}
+.insuranceWImage .insuranceSectionInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.insuranceWImage .insuranceSectionInner .insuranceSectionText {
+  width: 60%;
+}
+.insuranceWImage .insuranceSectionInner .insuranceSectionImg {
+  width: 35%;
+}
+
+.insuranceReverse .insuranceSectionInner {
+  flex-direction: row-reverse;
+}
+
+.insuranceNoBack .insuranceSectionText {
+  background-color: #fff !important;
 }/*# sourceMappingURL=style-rtl.css.map */

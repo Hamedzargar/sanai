@@ -912,11 +912,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				width: 40%;
 			}
 			p{
-				text-align: justify;
+				color: $textColorLighter;
 				width: 55%;
 			}
 			ul{
 				li{
+					margin: 12px 0;
 					a{
 						color: $textColorLighter;
 						transition: all 0.3s;
@@ -930,8 +931,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 .copyRightParent{
-	background-color: #112437;
 	padding: 20px 0;
+	background-color: $backColorDark;
+	border-top: 1px solid darken($color: $backColorDark, $amount: 5%);
 	.copyRight{
 		display: flex;
 		flex-wrap: wrap;
@@ -948,16 +950,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				width: 40px;
 				height: 40px;
 				margin: 0 5px;
-				background-color: #28394b;
+				background-color: rgba(0,0,0,0.1);
 				border-radius: 100%;
 				svg{
-					fill: #ebecf2;
+					fill: $textColorLowSat;
 				}
 			}
 			span{
-				color: #fff;
-				font-size: 10px;
-				font-weight: 200;
+				color: $textColorLowSat;
+				font-size: 12px;
+				// font-weight: 300;
 			}
 		}
 	}
@@ -986,7 +988,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					}
 				}
 				a{
-					padding: 15px 30px;
+					// padding: 15px 30px;
 				}
 			}
 		}
@@ -1039,7 +1041,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 						padding: 15px 0;
 						span{
 							padding-right: 6px;
-    						font-weight: 500;
+    						font-weight: 300;
 						}
 						svg{
 							fill: #ebecf2;

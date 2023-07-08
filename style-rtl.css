@@ -195,6 +195,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.lowSectionPadding {
+  padding: 40px 0;
+}
+@media screen and (max-width: 480px) {
+  .lowSectionPadding {
+    padding: 30px 0;
+  }
+}
+
 .lowPadding {
   padding: 7px;
 }
@@ -559,25 +568,25 @@ input {
 }
 input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url] {
   border: none;
-  background-color: #f6fbf5;
+  background-color: #f2f3f2;
   border-radius: 5px;
   color: #173711;
   font-size: 14px;
 }
 input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder {
-  color: #373c60;
+  color: #0d321e;
   opacity: 0.25;
 }
 input[type=text]:-moz-placeholder, input[type=password]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=tel]:-moz-placeholder, input[type=url]:-moz-placeholder {
-  color: #373c60;
+  color: #0d321e;
   opacity: 0.25;
 }
 input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=url]::-moz-placeholder {
-  color: #373c60;
+  color: #0d321e;
   opacity: 0.25;
 }
 input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder {
-  color: #373c60;
+  color: #0d321e;
   opacity: 0.25;
 }
 input[type=checkbox] {
@@ -611,7 +620,7 @@ textarea {
   padding: 10px;
   resize: none;
   border-radius: 5px;
-  background-color: #f6fbf5;
+  background-color: #f2f3f2;
   border: none;
   color: #173711;
   font-size: 14px;
@@ -710,6 +719,9 @@ select option {
 }
 .outlineButton::before {
   content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23112437' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
+}
+.outlineButton:hover {
+  background-color: #f0fbf5 !important;
 }
 
 .siteMessage {
@@ -1110,11 +1122,9 @@ select option {
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne .paragraphPart .flexPartLeft::after {
   position: absolute;
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f3b870' width='30' heigh='100' viewBox='300 10 38 110'%3E%3Cpath d='M331.5 32.9c8.5-9.3-7.3-19.2-14.5-22.8-.4-.2-.7.4-.3.6 5.9 3.2 16.9 9.9 15.9 17.9-.8 6.7-12.1 7.8-16.5 11.1-2.7 2-4.9 5-2.6 8.1 1.2 1.6 3.3 2.4 4.9 3.4 1.5.9 3 1.8 4.4 2.7 1 .6 1.9 1.3 2.8 2 2.3.8 2.9 2.4 1.8 4.6-.4 3.4-1.1 3.6-3.6 5.7l-4.1 3.4c-2.5 2.1-5.4 4.1-7.6 6.6-2.8 3.2-3.1 6.9-1.1 10.7 2.9 5.5 10.4 8.7 11.4 15.1.9 5.4-4 9.7-6.4 14.5-.8-1.7-1.7-3.2-2.9-4.6-.5-.6-1.8 0-1.4.8 1 2.4 2 4.8 2.9 7.2.2.5.7.8 1.3.5l12-6.9c1-.5 0-2-.9-1.5-3.2 1.8-6.4 3.6-9.6 5.5 2.1-4.8 7-8.8 6.9-14.3 0-5.1-4.2-8.6-7.5-11.9-4.3-4.3-7.7-9.7-2.4-15 2.6-2.6 5.7-4.9 8.5-7.2 2.9-2.4 9.5-6.4 7.2-11.1-2.1-4.3-17.5-9.2-15.6-14.5 2-5.5 13-6.2 17-10.6Z'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 100'%3E%3Cpath d='M23.2 22C30.4 12.3 11.6 7 5 5c6 2 24.6 7.8 17.6 16.5-6.3 6.7-19.3 9.8-18.9 20.9.4 5.2 4.4 9 7.6 12.6s6 7.3 6.8 11.9c1.6 8.9-4 16.9-10.1 23v-5.4A1.5 1.5 0 0 0 6.5 83 1.5 1.5 0 0 0 5 84.5v9a1.4 1.4 0 0 0 .6 1.2 1.6 1.6 0 0 0 .9.3H7l15-5a1.5 1.5 0 1 0-1-2.8l-9.2 3.1c5.7-6.6 10.4-14.9 8.5-23.8-1-4.9-4.2-9.1-7.6-12.6s-7-6.9-7.5-11.6c-.4-10.5 12.2-13.5 18-20.3Z' fill='%23f3b870'/%3E%3C/svg%3E");
   width: 30px;
   height: 100px;
-  background-repeat: no-repeat;
   top: 15px;
   left: 100%;
 }
@@ -1148,8 +1158,8 @@ select option {
   margin-bottom: auto;
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemTwo {
-  width: 45%;
-  height: 450px;
+  width: 42%;
+  height: 550px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1620,8 +1630,11 @@ select option {
   width: 40%;
 }
 .generalFooterParent .generalfooter .generalFooterCl p {
-  text-align: justify;
+  color: #8d8d8d;
   width: 55%;
+}
+.generalFooterParent .generalfooter .generalFooterCl ul li {
+  margin: 12px 0;
 }
 .generalFooterParent .generalfooter .generalFooterCl ul li a {
   color: #8d8d8d;
@@ -1632,8 +1645,9 @@ select option {
 }
 
 .copyRightParent {
-  background-color: #112437;
   padding: 20px 0;
+  background-color: #f7f8f7;
+  border-top: 1px solid #e9ece9;
 }
 .copyRightParent .copyRight {
   display: flex;
@@ -1651,16 +1665,15 @@ select option {
   width: 40px;
   height: 40px;
   margin: 0 5px;
-  background-color: #28394b;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
 }
 .copyRightParent .copyRight .generalCopyRightCl a svg {
-  fill: #ebecf2;
+  fill: #2f362e;
 }
 .copyRightParent .copyRight .generalCopyRightCl span {
-  color: #fff;
-  font-size: 10px;
-  font-weight: 200;
+  color: #2f362e;
+  font-size: 12px;
 }
 
 .aboutUsPageBack .aboutUsPage .aboutUsFirstSection {
@@ -1689,9 +1702,6 @@ select option {
   .aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft .aboutUsFirstLeftHead {
     text-align: center;
   }
-}
-.aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft a {
-  padding: 15px 30px;
 }
 @media screen and (max-width: 480px) {
   .aboutUsPageBack .aboutUsPage .serviceBoxParent {
@@ -1746,7 +1756,7 @@ select option {
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection span {
   padding-right: 6px;
-  font-weight: 500;
+  font-weight: 300;
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection svg {
   fill: #ebecf2;
@@ -1757,4 +1767,71 @@ select option {
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection span {
   font-weight: 300;
+}
+
+.insuranceIntroBack {
+  padding: 50px 0 0 30px;
+}
+.insuranceIntroBack .insuranceIntro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroInfo {
+  width: 55%;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroImage {
+  position: relative;
+  width: 35%;
+}
+.insuranceIntroBack .insuranceIntro .insuranceIntroImage img {
+  display: block;
+}
+
+.insuranceDivider {
+  text-align: center;
+  position: relative;
+}
+.insuranceDivider img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.insuranceDivider::before {
+  content: "";
+  background-color: #258a52;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 1px;
+}
+
+.insuranceSectionBack .insuranceSection .generalHeading h2 {
+  font-size: 24px !important;
+  word-spacing: -3px !important;
+  margin-bottom: 30px !important;
+}
+.insuranceWImage .insuranceSectionInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.insuranceWImage .insuranceSectionInner .insuranceSectionText {
+  width: 60%;
+}
+.insuranceWImage .insuranceSectionInner .insuranceSectionImg {
+  width: 35%;
+}
+
+.insuranceReverse .insuranceSectionInner {
+  flex-direction: row-reverse;
+}
+
+.insuranceNoBack .insuranceSectionText {
+  background-color: #fff !important;
 }/*# sourceMappingURL=style-rtl.css.map */

@@ -123,8 +123,10 @@ body {
   overflow-x: hidden !important;
   width: 100% !important;
   font-size: 14.5px;
+  font-weight: 400;
   padding: 0;
-  color: #112437 !important;
+  color: #173711 !important;
+  background-color: #fff;
 }
 
 * {
@@ -136,7 +138,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, input, textarea {
   font-family: iranyekanfn !important;
-  color: #112437;
+  color: #173711;
 }
 
 h1 {
@@ -179,12 +181,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 30px 0;
 }
 
-.extraHighMargined {
-  margin: 80px 0;
+.sectionPadding {
+  padding: 80px 0;
 }
 @media screen and (max-width: 480px) {
-  .extraHighMargined {
-    margin: 50px 0;
+  .sectionPadding {
+    padding: 40px 0;
   }
 }
 
@@ -202,10 +204,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .ExtraHighPadding {
   padding: 80px;
-}
-
-.sectionPadding {
-  padding: 50px 0;
 }
 
 .centeredText {
@@ -228,9 +226,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 480px) {
   .generalHeading h1, .generalHeading h2, .generalHeading h3, .generalHeading h4, .generalHeading h5, .generalHeading h6 {
-    font-size: 20px !important;
-    line-height: 40px !important;
+    font-size: 23px !important;
+    line-height: 50px !important;
   }
+}
+.generalHeading span {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 5px;
+  display: block;
+  position: relative;
+  padding-bottom: 20PX;
+}
+.generalHeading span::after {
+  position: absolute;
+  content: "";
+  background-color: #f3b870;
+  width: 100px;
+  height: 3px;
+  border-radius: 1px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bigHeading h1, .bigHeading h2, .bigHeading h3, .bigHeading h4, .bigHeading h5, .bigHeading h6 {
@@ -241,17 +260,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 26px !important;
   }
 }
+.bigHeading span {
+  font-size: 18px;
+}
 
 .mediumWeight {
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 p {
   line-height: 30px;
-  color: #2e3236;
+  color: #2f362e;
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: 300;
   font-size: 14px;
 }
 
@@ -267,12 +289,13 @@ p {
   font-weight: 400;
 }
 
-.lighterText {
-  color: #395470;
+.lightText {
+  color: #3f7039;
 }
 
 .lighterText {
   color: #8f8f8f;
+  font-weight: 300;
 }
 
 .smallText {
@@ -302,19 +325,23 @@ p {
 }
 
 .darkBorder {
-  border: 1px solid #6490f7;
+  border: 1px solid #0d321e;
 }
 
 .lightBorder {
-  border: 1px solid #112437;
+  border: 1px solid #65f7a7;
+}
+
+.offBorder {
+  border: 1px solid #ecf2eb;
 }
 
 .gradient1 {
-  background: linear-gradient(90deg, #ebecf2 0%, #f5f6fb 100%);
+  background: linear-gradient(90deg, #ecf2eb 0%, #f6fbf5 100%);
 }
 
 .gradient2 {
-  background: linear-gradient(90deg, #112437 0%, #1e4266 100%);
+  background: linear-gradient(90deg, #0d321e 0%, #258a52 100%);
 }
 .gradient2 * {
   color: #fff !important;
@@ -324,15 +351,35 @@ p {
 }
 
 .mainBoxBack {
-  background-color: #3570ff;
+  background-color: #258a52;
+  color: #fff !important;
+}
+.mainBoxBack * {
+  color: #fff !important;
+}
+.mainBoxBack a {
+  color: #fff !important;
+}
+.mainBoxBack .generalButton::before {
+  content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .darkBoxBack {
-  background-color: #112437;
+  background-color: #0d321e;
+  color: #fff !important;
+}
+.darkBoxBack * {
+  color: #fff !important;
+}
+.darkBoxBack a {
+  color: #fff !important;
+}
+.darkBoxBack .generalButton::before {
+  content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .lightBoxBack {
-  background-color: #ebecf2;
+  background-color: #ecf2eb;
 }
 
 .boxShadow {
@@ -361,13 +408,13 @@ table th {
   padding: 12px;
 }
 table tr:nth-child(2n+1) {
-  background-color: rgba(226, 229, 252, 0.3);
+  background-color: rgba(236, 252, 226, 0.3);
 }
 table td {
   font-size: 13.5px;
   padding: 8px 4px;
   font-weight: 400;
-  border: 1px solid rgba(13, 84, 131, 0.1);
+  border: 1px solid rgba(50, 131, 13, 0.1);
   padding: 15px 10px;
 }
 table td strong {
@@ -388,7 +435,7 @@ table td strong {
 
 a, a:visited {
   text-decoration: none;
-  color: #001b4c;
+  color: #173711;
 }
 
 li {
@@ -402,8 +449,8 @@ li::before {
   position: absolute;
   width: 6px;
   height: 6px;
-  border-radius: 100%;
-  background-color: #1c3c5c;
+  border-radius: 2px;
+  background-color: #258a52;
   top: 0;
   bottom: 0;
   margin-top: auto;
@@ -412,7 +459,7 @@ li::before {
 }
 
 .darkListStyle::before {
-  background-color: #112437;
+  background-color: #f3b870;
 }
 
 .noListStyle {
@@ -446,7 +493,7 @@ li::before {
   padding-right: 22px;
 }
 .arrowListStyle::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232c62d6' width='16' height='16' viewBox='0 0 512 512'%3E%3Cpath d='M256 493.4a237.3 237.3 0 1 1 167.9-69.5A236.2 236.2 0 0 1 256 493.4Zm0-424.8C152.7 68.6 68.6 152.7 68.6 256S152.7 443.4 256 443.4 443.4 359.3 443.4 256 359.3 68.6 256 68.6Zm-23.6 283.2a24.9 24.9 0 0 1-17.7-7.3l-70.8-70.8h-.1a.1.1 0 0 0-.1-.1h-.2a23.2 23.2 0 0 1-4.9-7.5h-.1a24.7 24.7 0 0 1-1.9-9.4 24.8 24.8 0 0 1 2-9.5h.1a21.3 21.3 0 0 1 2.3-4.2 19.5 19.5 0 0 1 1.7-2.3h.1a8 8 0 0 1 1.3-1.3l70.6-70.7a25 25 0 0 1 35.4 35.4L222 231h128.4a25 25 0 0 1 0 50H222l28.1 28.1a25.2 25.2 0 0 1 0 35.4 24.9 24.9 0 0 1-17.7 7.3Z'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath style='fill:none;stroke:%23258a52;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px' d='M249.38 336 170 256l79.38-80m-68.35 80H342'/%3E%3Cpath d='M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192Z' style='fill:none;stroke:%23258a52;stroke-miterlimit:10;stroke-width:32px'/%3E%3C/svg%3E");
   width: 16px;
   height: 19px;
   background-color: initial;
@@ -458,22 +505,20 @@ label {
   font-size: 13px;
   text-align: right;
   width: 100%;
-  padding-right: 15px;
 }
 
 input {
   margin-top: 5px;
   display: block;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px;
 }
 input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url] {
   border: none;
-  background-color: #f5f6fb;
+  background-color: #f6fbf5;
   border-radius: 5px;
-  color: #112437;
+  color: #173711;
   font-size: 14px;
-  margin-right: -15px;
 }
 input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder {
   color: #373c60;
@@ -497,7 +542,7 @@ input[type=checkbox] {
   margin: 0;
 }
 input[type=submit] {
-  background-color: #3570ff;
+  background-color: #258a52;
   color: #fff;
   border: none;
   font-weight: 500;
@@ -508,7 +553,7 @@ input[type=submit] {
   font-size: 14px;
 }
 input[type=submit]:hover {
-  background-color: #024cff;
+  background-color: #1a623a;
 }
 input:focus {
   outline: none;
@@ -519,14 +564,13 @@ textarea {
   display: block;
   width: 100%;
   height: 150px;
-  padding: 10px 20px;
+  padding: 10px;
   resize: none;
   border-radius: 5px;
-  background-color: #f5f6fb;
+  background-color: #f6fbf5;
   border: none;
-  color: #112437;
+  color: #173711;
   font-size: 14px;
-  margin-right: -15px;
 }
 textarea::-webkit-input-placeholder {
   color: #373c60;
@@ -567,7 +611,7 @@ select option {
   width: max-content;
   margin: 30px 10px;
   margin-right: 0;
-  background-color: #3570ff;
+  background-color: #258a52;
   border-radius: 5px;
   border: none;
   color: #fff !important;
@@ -575,6 +619,7 @@ select option {
   padding-left: 40px;
   cursor: pointer;
   display: block;
+  transition: all 0.3s;
 }
 .generalButton::before {
   content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
@@ -588,6 +633,9 @@ select option {
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
+}
+.generalButton:hover {
+  background-color: #1a623a;
 }
 .generalButton:hover::before {
   left: 10px;
@@ -607,11 +655,14 @@ select option {
   border: none !important;
   padding-right: 0;
 }
+.noBorderButton:hover {
+  background-color: none !important;
+}
 
 .outlineButton {
   background-color: transparent !important;
-  color: #112437 !important;
-  border: 1px solid #112437;
+  color: #173711 !important;
+  border: 1px solid #258a52;
 }
 .outlineButton::before {
   content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23112437' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
@@ -738,16 +789,13 @@ select option {
 
 /**********************************************     Header Desktop       ****************************************************************/
 .mainHeaderParent {
-  padding: 10px 0;
   background-color: #fff;
+  padding: 5px 0;
 }
 .mainHeaderParent .mainHeader {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 .mainHeaderParent .mainHeader .headerLogo {
   display: flex;
@@ -847,7 +895,7 @@ select option {
 }
 .desktopMenu ul .menu-item-has-children ul li {
   padding: 0;
-  border-bottom: 1px solid #3471fe;
+  border-bottom: 1px solid #ecf2eb;
   margin: 0;
   transition: all 0.3s;
 }
@@ -861,9 +909,13 @@ select option {
   display: block;
   overflow: hidden;
   border-radius: 20px;
+  transition: all 0.3s;
 }
 .desktopMenu ul .menu-item-has-children ul li:hover {
-  background-color: #f2f2f2;
+  background-color: #258a52;
+}
+.desktopMenu ul .menu-item-has-children ul li:hover a {
+  color: #fff;
 }
 .desktopMenu ul .menu-item-has-children ul .menu-item-has-children {
   display: flex;
@@ -908,6 +960,11 @@ select option {
   padding: 2px 0;
   align-items: center;
 }
+@media screen and (max-width: 480px) {
+  .topHeaderParent .topHeader {
+    display: none;
+  }
+}
 .topHeaderParent .topHeader .topHeaderLink a {
   font-size: 12.5px;
   color: #fff;
@@ -919,6 +976,9 @@ select option {
 }
 
 /*******************************************   Home Page  ok   ********************************************/
+.homePageSliderSectionParent {
+  padding-top: 0;
+}
 .homePageSliderSectionParent .homePageSliderSection {
   display: flex;
   flex-wrap: wrap;
@@ -937,7 +997,7 @@ select option {
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemOne span {
   font-size: 16.5px;
-  color: #3570ff;
+  color: #258a52;
   font-weight: 400;
 }
 @media screen and (max-width: 480px) {
@@ -1031,7 +1091,7 @@ select option {
 }
 .homePageSliderSectionParent .homePageSliderSection .homePageSliderSectionFlexItemTwo {
   width: 45%;
-  height: 600px;
+  height: 450px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1056,15 +1116,6 @@ select option {
 }
 
 /*********** ok  ****************/
-.homePageCatSectionParent {
-  padding: 50px 0;
-}
-.homePageCatSectionParent .headerTitlePart span {
-  color: #fff;
-  font-size: 14.5px;
-  font-weight: 300;
-  line-height: 30px;
-}
 .homePageCatSectionParent .catLogoPart {
   display: flex;
   flex-wrap: wrap;
@@ -1105,7 +1156,6 @@ select option {
   visibility: hidden;
   transform: translateY(5px);
   transition: all 0.3s;
-  color: #fff;
   font-size: 12.5px;
   display: block;
   padding-top: 20px;
@@ -1145,12 +1195,6 @@ select option {
 @media screen and (max-width: 992px) {
   .homePageBimehParent .homePageBimeh .generalHeading, .homePageBimehParent .homePageBimeh p {
     width: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .homePageBimehParent .homePageBimeh .generalHeading h2 {
-    font-size: 23px !important;
-    line-height: 50px !important;
   }
 }
 
@@ -1196,7 +1240,6 @@ select option {
   max-height: 50px;
 }
 .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent h3 {
-  color: #fff;
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -1206,27 +1249,8 @@ select option {
   }
 }
 .homePageServiceBoxParent .homePageServiceBox .serviceBoxParent p {
-  color: #fff;
   line-height: 23px;
   font-weight: 300;
-}
-.homePageServiceBoxParent .homePageServiceBox .box1 .generalButton, .homePageServiceBoxParent .homePageServiceBox .box2 .generalButton {
-  color: #fff !important;
-}
-.homePageServiceBoxParent .homePageServiceBox .box1 .generalButton::before, .homePageServiceBoxParent .homePageServiceBox .box2 .generalButton::before {
-  content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23fff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
-}
-.homePageServiceBoxParent .homePageServiceBox .box1 {
-  background-color: #112437;
-}
-.homePageServiceBoxParent .homePageServiceBox .box2 {
-  background-color: #3570ff;
-}
-.homePageServiceBoxParent .homePageServiceBox .box3 {
-  background-color: #ebecf2;
-}
-.homePageServiceBoxParent .homePageServiceBox .box3 h3, .homePageServiceBoxParent .homePageServiceBox .box3 p {
-  color: #112437;
 }
 
 /************  ok  *************/
@@ -1250,7 +1274,7 @@ select option {
     order: 1;
   }
   .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart .generalHeading {
-    margin: 30px 0;
+    margin: 0;
     margin-top: 0;
   }
   .homePageAboutSectionParent .homePageAboutSection .aboutSectionTxtPart .generalButton {
@@ -1269,10 +1293,6 @@ select option {
 }
 
 /*********** ok  ***********/
-.homePageCountNumParent {
-  padding: 70px 0;
-  background-color: #ebecf2;
-}
 .homePageCountNumParent h2 {
   margin-bottom: 20px;
 }
@@ -1285,11 +1305,9 @@ select option {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 60px 0px;
 }
 @media screen and (max-width: 480px) {
   .homePageCountNumParent .homePageCountNum {
-    padding: 0;
     justify-content: space-between;
   }
 }
@@ -1358,24 +1376,24 @@ select option {
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle1 {
   left: -65PX;
-  background-color: #112437;
+  background-color: #0d321e;
   color: #fff;
   z-index: 99;
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle2 {
   left: -25PX;
-  border: 1px solid #3570ff;
+  border: 1px solid #258a52;
   z-index: 98;
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle3 {
   right: -25PX;
-  background-color: #3570ff;
+  background-color: #258a52;
   color: #fff;
   z-index: 99;
 }
 .homePageCountNumParent .homePageCountNum .outerCountNum .circle4 {
   right: -65px;
-  border: 1px solid #3570ff;
+  border: 1px solid #258a52;
   z-index: 98;
 }
 
@@ -1423,13 +1441,18 @@ select option {
   right: -100px;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(2) span {
-  background-color: #3570ff;
+  background-color: #258a52;
+}
+@media screen and (max-width: 480px) {
+  .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(2) {
+    position: static;
+  }
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(1) span {
-  background-color: #112437;
+  background-color: #0d321e;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent:nth-of-type(3) span {
-  background-color: #ebecf2;
+  background-color: #ecf2eb;
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent span {
   display: flex;
@@ -1438,7 +1461,7 @@ select option {
 }
 .homePageChartSectionParent .homePageChartSection .chartSectionPartCard .generalCardParent .mainParagraph {
   width: calc(100% - 80px);
-  color: #112437;
+  color: #0d321e;
   font-weight: 300;
 }
 
@@ -1448,10 +1471,18 @@ select option {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard {
   width: 30%;
+}
+@media screen and (max-width: 480px) {
+  .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard:last-child {
+    margin-bottom: 0;
+  }
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .mainParagraph {
   line-height: 25px;
@@ -1476,7 +1507,7 @@ select option {
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .commentHeader .innerCommentHeader .cmName {
   font-weight: 700;
-  color: #395470;
+  color: #3f7039;
 }
 .homePageCommentsBoxParent .homePageCommentsBox .commentsBoxParent .commentBoxCard .commentHeader .innerCommentHeader .cmSide {
   font-weight: 300;
@@ -1503,7 +1534,6 @@ select option {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 20px;
 }
 .askDoctorParent .askDoctor h2 {
   position: relative;

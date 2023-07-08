@@ -44,6 +44,10 @@ get_header();
                     <span>مگنت درمانی</span>   
                 </div>
                 <div class="mainIconicCat">
+                    <img src="<?php bloginfo('template_directory') ?>/img/rehabilitation-.png" alt="">
+                    <span>مگنت درمانی</span>   
+                </div>
+                <div class="mainIconicCat">
                     <img src="<?php bloginfo('template_directory') ?>/img/physical-.png" alt="">
                     <span>مگنت درمانی</span>   
                 </div>
@@ -94,7 +98,7 @@ get_header();
                 <img src="<?php bloginfo('template_directory') ?>/img/222.jpg" alt="">
             </div>
             <div class="aboutSectionTxtPart">
-                <div class="generalHeading highMargined">
+                <div class="generalHeading">
                     <h2>لورم ایپسوم متن ساختگی با تولید<br>لورم ایپسوم متن ساختگی با تولید</h2>
                 </div>
                 <p class="mainParagraph">لورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولیدلورم ایپسوم متن ساختگی با تولید777</p>
@@ -105,29 +109,29 @@ get_header();
     <div class="homePageCountNumParent lightBoxBack sectionPadding">
             <div class="centeredText generalHeading">
                 <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h2>
-                <span class="mainParagraph">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم<br>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
             </div>
+            <span class="mainParagraph lightText smallText centeredText mainView">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم<br>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
         <div class="homePageCountNum sectionPadding mainView">
             <div class="outerCountNum">
-                <div class="innerCountNum highPadding centeredText circle1">
+                <div class="innerCountNum highPadding centeredText circle1 darkBoxBack">
                     <span class="numbePart">62%</span>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
-                <div class="innerCountNum highPadding centeredText circle2">
+                <div class="innerCountNum highPadding centeredText circle2 mainBorder">
                     <span class="numbePart">62%</span>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
-                <div class="innerCountNum highPadding centeredText circle3">
+                <div class="innerCountNum highPadding centeredText circle3 mainBoxBack">
                     <span class="numbePart">62%</span>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
-                <div class="innerCountNum highPadding centeredText circle4">
+                <div class="innerCountNum highPadding centeredText circle4 mainBorder">
                     <span class="numbePart">62%</span>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>

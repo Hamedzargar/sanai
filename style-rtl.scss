@@ -343,7 +343,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		.homePageSliderSectionFlexItemOne{
 			width: 45%;
-			@include xs{
+			@include lg{
+				width: 55%;
+			}
+			@include md{
+				width: 60%;
+			}
+			@include sm{
 				width: 100%;
 				order: 2;
 				margin-top: 30px;
@@ -352,16 +358,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				font-size: 16.5px;
 				color: $mainColor;
 				font-weight: 400;
-				@include xs{
+				@include sm{
 					display: block;
-					text-align: center;
+					// text-align: center;
 				}
 			}
 			h2{
 				line-height: 70px;
-				@include xs{
+				@include sm{
 					line-height: 50px !important;
-					text-align: center;
+					// text-align: center;
 				}
 				margin-top: 0;
 				margin-bottom: 10px;
@@ -372,7 +378,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				flex-wrap: wrap;
 				justify-content: space-between;
 				padding-left: 35px;
-				@include xs{
+				@include sm{
 					justify-content: center;
 					padding-left: 0;
 				}
@@ -381,22 +387,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					order: 2;
 					padding-right: 20px;
 					position: relative;
-					@include xs{
+					@include lg{
+						margin-right: 30px;
+					}
+					@include sm{
 						padding-right: 5px;
+						width: 90%;
+					}
+					@include xs{
 						width: 100%;
+						margin-right: 0;
 					}
 					.noBorderButton{
 						padding-right: 20px;
 					}
 					p{
-						@include xs{
-							text-align: center;
-						}
+						// @include sm{
+						// 	text-align: center;
+						// }
 					}
 					&::after{
 						position: absolute;
 						content: "";
-						background-image: url("data:image/svg+xml,%3Csvg data-name='Layer 2' fill='%233570ff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.97 8.01'%3E%3Cg data-name='Layer 1'%3E%3Cpath d='M1.18 7.4s-.02-.04-.02-.07v-.11c0-.02.01-.04.02-.06v-.04c0-.01.01-.02.02-.03 0-.01.01-.02.02-.03 0-.01.01-.02.02-.03 0-.01.01-.02.02-.03 0 0 0-.01.01-.02 0 0 0-.01.01-.02 0 0 .01-.02.02-.03 0 0 .01-.02.02-.03 0-.01.01-.02.02-.04 0 0 0-.01.01-.02 0 0 0-.02.01-.02 0-.02.02-.04.03-.05l.03-.06c0-.01.01-.02.02-.03v-.04c.04-.1.09-.22.12-.37.02-.07.03-.15.03-.23v-.47c0-.02 0-.05-.01-.07 0-.02 0-.05-.02-.07v-.07c0-.01 0-.02-.01-.04v-.04c0-.02-.02-.05-.02-.07-.03-.1-.08-.19-.13-.29 0-.01-.01-.02-.02-.03v-.02s-.02-.01-.02-.02c-.01-.02-.03-.05-.04-.07-.02-.02-.03-.04-.05-.07 0 0 0-.01-.01-.02v-.02s-.03-.02-.04-.03c-.13-.17-.31-.33-.5-.49-.09-.08-.19-.17-.28-.26a1.885 1.885 0 0 1-.35-.49c-.03-.06-.05-.13-.07-.2A.693.693 0 0 1-.01 3v-.2c0-.13.03-.26.05-.38a3.58 3.58 0 0 1 .14-.43c.01-.03.02-.05.03-.08.01-.03.02-.05.03-.08.01-.03.02-.05.03-.08 0-.01.01-.03.02-.04v-.04a.3.3 0 0 1 .04-.08c0-.01.01-.03.02-.04 0-.01.01-.02.02-.04s.02-.05.04-.07c.1-.19.2-.37.31-.53.1-.16.21-.3.3-.41.02-.03.05-.06.07-.09.01-.01.02-.03.03-.04.01-.01.02-.03.03-.04.04-.05.08-.09.12-.13L1.3.17l.03-.03.05-.05.02-.02h.02c.01-.01.03-.02.04-.03.04-.04.07-.06.07-.05s-.01.03-.05.08c0 .01-.02.02-.03.04v.02s-.01.02-.02.02c-.01.02-.03.03-.04.05 0 0-.02.02-.02.03 0 .01-.02.02-.02.03-.03.04-.07.09-.11.14 0 .01-.02.03-.03.04-.01.01-.02.03-.03.04l-.06.09C1.04.69.94.83.85.99c-.09.16-.19.33-.27.53-.01.02-.02.05-.03.07 0 .01-.01.02-.02.04 0 .01-.01.02-.02.04s-.02.05-.03.08v.04c0 .01 0 .03-.01.04-.01.03-.02.05-.03.08 0 .03-.02.05-.03.08 0 .03-.02.05-.03.08 0 .03-.02.05-.03.08l-.09.33c-.02.11-.04.23-.04.34 0 .11.01.23.04.34.02.05.03.11.06.16a1.093 1.093 0 0 0 .31.41l.27.24c.09.08.19.16.28.24.05.04.09.09.14.13l.03.03c.01.01.02.02.03.04.02.02.04.05.06.07 0 .01.02.02.03.04v.02s.02.01.03.02c.02.03.04.05.06.08.02.03.03.05.05.08 0 0 0 .01.01.02v.02l.04.04c.06.11.11.22.15.32 0 .03.02.05.03.08s0 .02 0 .02v.02c0 .01 0 .03.01.04v.04c0 .01 0 .03.01.04 0 .03.01.05.02.08 0 .03.01.05.02.08 0 .03 0 .05.01.08v.47c0 .1-.02.19-.03.27-.03.17-.08.32-.13.43v.04c0 .01-.01.03-.02.04-.01.03-.02.05-.04.07l-.03.06c0 .01-.01.02-.02.03 0 0-.01.02-.01.03 0 .02-.02.03-.03.05 0 .01-.02.02-.02.03-.01.02-.02.03-.03.04 0 0 0 .01-.01.02 0 0 0 .01-.01.02 0 .01-.02.02-.03.04 0 .01-.02.02-.03.03l-.03.03c-.01 0-.02.02-.03.03 0 0-.01 0-.02.01 0 0-.01 0-.02.01-.02.01-.04.03-.06.04 0 0-.02 0-.03.01H1.2c-.03 0-.05 0-.07-.02Z'/%3E%3Cpath d='m.91 8.01 1.06-.67-.66-.05-.47-.53.07 1.25z'/%3E%3C/g%3E%3C/svg%3E");
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f3b870' width='30' heigh='100' viewBox='300 10 38 110'%3E%3Cpath d='M331.5 32.9c8.5-9.3-7.3-19.2-14.5-22.8-.4-.2-.7.4-.3.6 5.9 3.2 16.9 9.9 15.9 17.9-.8 6.7-12.1 7.8-16.5 11.1-2.7 2-4.9 5-2.6 8.1 1.2 1.6 3.3 2.4 4.9 3.4 1.5.9 3 1.8 4.4 2.7 1 .6 1.9 1.3 2.8 2 2.3.8 2.9 2.4 1.8 4.6-.4 3.4-1.1 3.6-3.6 5.7l-4.1 3.4c-2.5 2.1-5.4 4.1-7.6 6.6-2.8 3.2-3.1 6.9-1.1 10.7 2.9 5.5 10.4 8.7 11.4 15.1.9 5.4-4 9.7-6.4 14.5-.8-1.7-1.7-3.2-2.9-4.6-.5-.6-1.8 0-1.4.8 1 2.4 2 4.8 2.9 7.2.2.5.7.8 1.3.5l12-6.9c1-.5 0-2-.9-1.5-3.2 1.8-6.4 3.6-9.6 5.5 2.1-4.8 7-8.8 6.9-14.3 0-5.1-4.2-8.6-7.5-11.9-4.3-4.3-7.7-9.7-2.4-15 2.6-2.6 5.7-4.9 8.5-7.2 2.9-2.4 9.5-6.4 7.2-11.1-2.1-4.3-17.5-9.2-15.6-14.5 2-5.5 13-6.2 17-10.6Z'/%3E%3C/svg%3E");
 						width: 30px;
 						height: 100px;
 						background-repeat: no-repeat;
@@ -410,7 +423,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 						display: flex;
 						flex-wrap: wrap;
 						justify-content: right;
-						@include xs{
+						@include sm{
 							justify-content: space-between;
 						}
 					}
@@ -436,7 +449,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			height: 450px;
 			border-radius: 20px;
 			overflow: hidden;
-			@include xs{
+			@include lg{
+				width: 35%;
+			}
+			@include sm{
 				width: 100%;
 				order: 1;
 				height: 400px;
@@ -466,53 +482,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		padding-top: 50px;
 		align-items: center;
 		.mainIconicCat{
-			width: 20%;
+			width: 14%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
+			@include sm{
+				width: 30%;
+				margin-bottom: 40px;
+			}
 			@include xs{
 				width: 48%;
-				margin-bottom: 40px;
-				&:last-child{
-					margin: auto;
-					margin-bottom: 0;
-				}
 			}
 			img{
 				width: 90px;
-				transform: scale(0.8);
-				opacity: 0.7;
-				transition: all 0.3s;
-				@include xs{
-					opacity: 1;
-				}
 			}
 			span{
-				opacity: 0;
-				visibility: hidden;
-				transform: translateY(5px);
-				transition: all 0.3s;
 				font-size: 12.5px;
 				display: block;
 				padding-top: 20px;
-				@include xs{
-					opacity: 1;
-					visibility: visible;
-					transform: translateY(0);
-				}
 			}	
-			&:hover{
-				img{
-					transform: scale(1);
-					opacity: 1;
-				}
-				span{
-					opacity: 1;
-					visibility: visible;
-					transform: translateY(0);
-				}		
-			}
 		}
 	}
 }
@@ -525,9 +514,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		@include xs{
-			text-align: center;
-		}
 		.generalHeading , p{
 			width: 48%;
 			@include md{
@@ -550,6 +536,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			width: 32%;
 			@include sm{
 				width: 48%;
+				padding: 25px;
 				&:last-child{
 					margin: auto;
 					margin-top: 20px;
@@ -598,25 +585,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		align-items: center;
 		.aboutSectionTxtPart , .aboutSectionImgPart{
 			width: 48%;
-			@include xs{
+			@include sm{
 				width: 100%;
-				text-align: center;
 			}
 		}
 		.aboutSectionTxtPart{
-			@include xs{
+			@include sm{
 				order: 1;
-				.generalHeading {
-					margin: 0;
-					margin-top: 0;
-				}
-				.generalButton{
-					margin: 30px auto;
-				}
 			}
 		}
 		.aboutSectionImgPart{
-			@include xs{
+			@include sm{
 				order: 2;
 			}
 		}
@@ -625,6 +604,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				display: block;
 				margin-right: auto;
 				border-radius: 20px;
+				@include sm{
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -635,12 +619,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 .homePageCountNumParent{
-	h2{
-		margin-bottom: 20px;
-	}
-	.mainParagraph{
-		line-height: 25px;
-		font-weight: 300 !important;
+	span{
+		display: block;
 	}
 	.homePageCountNum {
 		display: flex;
@@ -652,7 +632,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 		.outerCountNum{
 			width: 25%;
-			@include xs{
+			@include md{
 				width: 48%;
 				position: static;
 			}
@@ -664,13 +644,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				flex-direction: column;
 				justify-content: center;
 				position: relative;
-				@include xs{
+				@include md{
 					position: static;
-					width: 180px;
-					height: 180px;
+					width: 250px;
+					height: 250px;
+					margin: auto;
 					&:nth-child(1),&:nth-child(2){
 						margin-bottom: 20px;
 					}
+				}
+				@include xs{
+					width: 180px;
+					height: 180px;
+
 				}
 				@include xxs{
 					width: 150px;
@@ -684,6 +670,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				}
 				.numbePart{
 					font-size: 50px;
+					@include md{
+						font-size: 35px;
+					}
 					@include xs{
 						font-size: 25px;
 					}
@@ -691,7 +680,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				.descPart{
 					font-weight: 300;
 					margin-top: 15px;
-					@include xs{
+					@include md{
 						margin-top: 5px;
 					}
 
@@ -705,24 +694,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			}
 			.circle1{
 				left: -65PX;
-				background-color: $mainColorDark;
-				color: #fff;
 				z-index: 99;
 			}
 			.circle2{
 				left: -25PX;
-				border: 1px solid $mainColor;
 				z-index: 98;
 			}
 			.circle3{
 				right: -25PX;
-				background-color: $mainColor;
-				color: #fff;
 				z-index: 99;
 			}
 			.circle4{
 				right: -65px;
-				border: 1px solid $mainColor;
 				z-index: 98;
 			}
 		}
@@ -742,9 +725,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		.chartSectionPartTxt{
 			width: 48%;
-			@include xs{
+			@include md{
 				width: 100%;
-				text-align: center;
 				.generalButton{
 					margin: 20px auto;
 				}
@@ -752,6 +734,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 		.chartSectionPartCard{
 			width: 40%;
+			@include md{
+				width: 80%;
+				margin: auto;
+			}
 			@include xs{
 				width: 100%;
 			}
@@ -766,11 +752,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: center;
+				@include xs{
+					padding: 15px;
+				}
+				@include xxs{
+					padding: 8px;
+				}
 				&:nth-of-type(2){
 					position: relative;
 					right: -100px;
 					span{
 						background-color: $mainColor;
+					}
+					@include md{
+						right: -30px;
 					}
 					@include xs{
 						position: static;
@@ -881,6 +876,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		.generalHeading{
+			&::after{
+				display: none;
+			}
+		}
 		h2{
 			position: relative;
 		}
@@ -890,6 +890,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		.generalButton{
 			margin: 30px auto;
 			position: relative;
+			@include xs{
+				margin: 10px auto;
+			}
 		}
 	}
 }
@@ -899,53 +902,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 .generalFooterParent{
-	margin: 80px 0;
 	.generalfooter{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		.generalFooterCl{
-			width: 18%;
+			width: 16%;
 			&:nth-child(1){
 				width: 40%;
 			}
-			h3{
-				font-size: 20px;
-				color: #525252;
-			}
 			p{
 				text-align: justify;
-				line-height: 25px;
-				font-size: 13px;
 				width: 55%;
 			}
 			ul{
-				padding: 0;
-				margin: 0;
 				li{
-					list-style: none;
-					line-height: 30px;
-					padding-right: 0;
-					&::before{
-						display: none;
-					}
 					a{
-						color: #8f8f8f;
+						color: $textColorLighter;
 						transition: all 0.3s;
 						&:hover{
-							color: #4e4e4e;
+							color: darken($textColorLighter, 20%);
 						}
 					}
 				}
-			}
-			&:nth-child(2){
-				width: 12%;
-			}
-			&:nth-child(3){
-				width: 12%;
-			}
-			&:nth-child(4){
-				width: 12%;
 			}
 		}
 	}

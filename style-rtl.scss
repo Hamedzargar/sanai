@@ -906,12 +906,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		.generalFooterCl{
 			width: 16%;
+			@include xs{
+				width: 100%;
+				margin: 10px 0;
+			}
+			@include sm{
+				margin: 10px 0;
+			}
 			&:nth-child(1){
 				width: 40%;
+				@include xs{
+					width: 100%;
+				}
+				@include sm{
+					width: 100%;
+				}
+				@include md{
+					width: 100%;
+					margin-bottom: 10px;
+				}
 			}
 			p{
 				color: $textColorLighter;
 				width: 55%;
+				@include sm{
+					width: 100%;
+				}
+				@include md{
+					width: 100%;
+				}
 			}
 			ul{
 				li{
@@ -1138,5 +1161,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .insuranceNoBack{
 	.insuranceSectionText{
 		background-color: #fff !important;
+	}
+}
+.askDocPageBack{
+	.askDocPage{
+		.askDocPageSection{
+			display: flex;
+    		flex-wrap: wrap;
+    		justify-content: space-between;
+			.askDocPageSectionRight{
+				width: 45%;
+				@include xs{
+					width: 100% !important;
+				}
+				@include sm{
+					width: 100% !important;
+				}
+				@include md{
+					width: 55%;
+				}
+				border: 1px solid lighten($textColorLowSat,70%);
+			}
+			.askDocPageSectionLeft{
+				width: 45%;
+				@include xs{
+					width: 100% !important;
+				}
+				@include sm{
+					width: 100% !important;
+				}
+				@include md{
+					width: 35%;
+				}
+			}
+		}
 	}
 }

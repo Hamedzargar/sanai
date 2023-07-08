@@ -1629,8 +1629,11 @@ select option {
   width: 40%;
 }
 .generalFooterParent .generalfooter .generalFooterCl p {
-  text-align: justify;
+  color: #8d8d8d;
   width: 55%;
+}
+.generalFooterParent .generalfooter .generalFooterCl ul li {
+  margin: 12px 0;
 }
 .generalFooterParent .generalfooter .generalFooterCl ul li a {
   color: #8d8d8d;
@@ -1641,8 +1644,9 @@ select option {
 }
 
 .copyRightParent {
-  background-color: #112437;
   padding: 20px 0;
+  background-color: #f7f8f7;
+  border-top: 1px solid #e9ece9;
 }
 .copyRightParent .copyRight {
   display: flex;
@@ -1660,16 +1664,15 @@ select option {
   width: 40px;
   height: 40px;
   margin: 0 5px;
-  background-color: #28394b;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
 }
 .copyRightParent .copyRight .generalCopyRightCl a svg {
-  fill: #ebecf2;
+  fill: #2f362e;
 }
 .copyRightParent .copyRight .generalCopyRightCl span {
-  color: #fff;
-  font-size: 10px;
-  font-weight: 200;
+  color: #2f362e;
+  font-size: 12px;
 }
 
 .aboutUsPageBack .aboutUsPage .aboutUsFirstSection {
@@ -1698,9 +1701,6 @@ select option {
   .aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft .aboutUsFirstLeftHead {
     text-align: center;
   }
-}
-.aboutUsPageBack .aboutUsPage .aboutUsFirstSection .aboutUsFirstLeft a {
-  padding: 15px 30px;
 }
 @media screen and (max-width: 480px) {
   .aboutUsPageBack .aboutUsPage .serviceBoxParent {
@@ -1755,7 +1755,7 @@ select option {
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection span {
   padding-right: 6px;
-  font-weight: 500;
+  font-weight: 300;
 }
 .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection svg {
   fill: #ebecf2;

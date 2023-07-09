@@ -2132,4 +2132,73 @@ select option {
   .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
     width: 35%;
   }
+}
+
+.faqPageBack .faqPage .faqSection .faqSectionInner {
+  border: 1px solid #e3e7e2;
+  cursor: pointer;
+}
+.faqPageBack .faqPage .faqSection .faqSectionInner .faqQ {
+  padding: 15px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+.faqPageBack .faqPage .faqSection .faqSectionInner .faqQ span {
+  display: block;
+  width: 90%;
+}
+.faqPageBack .faqPage .faqSection .faqSectionInner .faqA {
+  padding: 10px 15px;
+  display: none;
+}
+.faqPageBack .faqPage .faqSection .faqSectionInner svg {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.bookingFormPageBack .bookingFormPage .bookingFormSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionRight {
+  width: 45%;
+  border: 1px solid #e3e7e2;
+}
+@media screen and (max-width: 480px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionRight {
+    width: 55%;
+  }
+}
+.bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionLeft {
+  width: 45%;
+}
+@media screen and (max-width: 480px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionLeft {
+    width: 35%;
+  }
 }/*# sourceMappingURL=style-rtl.css.map */

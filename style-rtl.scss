@@ -152,15 +152,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             align-items: center;
             .mobileMenuIcon{
 				display: none;
-                width: 30px;
-                height: 30px;
-                border: 1px solid #d3d3d3;
-                border-radius: 100%;
                 align-items: center;
                 justify-content: center;
-                svg{
-                    transform: rotate(90deg);
-                }
+				cursor: pointer;
+				margin-right: 20px;
 				@include xs{
 					display: flex;
 				}
@@ -168,7 +163,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             }
             .mainSearchIcon{
 				display: flex;
-                margin-right: 10px;
                 cursor: pointer;
                 svg{
                     width: 20px;
@@ -964,25 +958,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			&:nth-child(2){
 				display: flex;
 			}
-			a{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 40px;
-				height: 40px;
-				margin: 0 5px;
-				background-color: rgba(0,0,0,0.1);
-				border-radius: 100%;
-				svg{
-					fill: $textColorLowSat;
-				}
-			}
 			span{
 				color: $textColorLowSat;
 				font-size: 12px;
 				// font-weight: 300;
 			}
 		}
+	}
+}
+.footerSocialIcon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin: 0 5px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 100%;
+	svg{
+		fill: $textColorLowSat;
 	}
 }
 .aboutUsPageBack{
@@ -1031,67 +1025,81 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 		.FirstSectionRight{
 			width: 50%;
-			@include xs{
+			border: 1px solid lighten($color: $textColorLowSat, $amount: 70%);
+			@include sm{
 				width: 100%;
 			}
 		}
 		.FirstSectionLeft{
 			width: 38%;
-			@include xs{
+			@include sm{
 				width: 100%;
 			}
-		}
-		.contactPageBoxBack{
-			.contactPageBox{
-				display: flex;
-				justify-content: center;
-				flex-wrap: wrap;
-				.contactBoxs{
-					width: 25%;
+			.callDetails{
+				a{
 					display: flex;
-					flex-direction: column;
-					margin: 0 15px;
-					padding: 30px 20px;
-					// border-radius: 20px;
-					@include xs{
-						width: 90%;
-						margin: 10px 0 !important;
-					}
-					.topSection{
+					align-items: center;
+					justify-content: flex-start;
+					span{
 						display: flex;
-						padding: 15px 0;
-						span{
-							padding-right: 6px;
-    						font-weight: 300;
-						}
-						svg{
-							fill: #ebecf2;
-						}
+						align-items: center;
+						line-height: 25px;
 					}
-					.bottomSection{
-						display: flex;
-						flex-direction: column;
-						span{
-							font-weight: 300;
-						}
+					svg{
+						margin-left: 10px;
 					}
 				}
+			}
+			.contactSocial{
+				h4{
+					text-align: center;
+				}
+				
 			}
 		}
 	}
 }
+.socialIconsWrapper{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					a{
+						display: flex;
+						margin: 0 5px;
+						width: 45px;
+						height: 45px;
+						justify-content: center;
+						align-items: center;
+						background-color: rgba(13, 50, 30 , 0.07);
+						border-radius: 100%;
+					}
+				}
 .insuranceIntroBack{
-	padding: 50px 0 0 30px;
+	padding: 50px 0;
 	.insuranceIntro{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		.insuranceIntroInfo{
 			width: 55%;
+			@include sm{
+				width: 100%;
+				margin-bottom: 20px;
+			}
 		}
 		.insuranceIntroImage{
 			position: relative;
 			width: 35%;
+			@include sm{
+				width: 60%;
+				margin: auto;
+			}
+			@include xs{
+				width: 80%;
+			}
+			@include xxs{
+				width: 100%;
+			}
 			img{
 				display: block;
 			}
@@ -1125,19 +1133,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			h2{
 				font-size: 24px !important;
 				word-spacing: -3px !important;
-				margin-bottom: 30px !important;
-			}
-		}
-		.insuranceSectionInner{
-			.insuranceSectionText{
-				
-			}
-			.insuranceSectionImg{
-
 			}
 		}
 	}
-	
 }
 .insuranceWImage{
 	.insuranceSectionInner{
@@ -1146,10 +1144,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		align-items: center;
 		.insuranceSectionText{
-			width: 60%;	
+			width: 60%;
+			@include sm{
+				width: 100%;
+				margin-bottom: 20px;
+			}
 		}
 		.insuranceSectionImg{
 			width: 35%;
+			@include sm{
+				width: 60%;
+				margin: auto;
+			}
+			@include xs{
+				width: 80%;
+			}
+			@include xxs{
+				width: 100%;
+			}
 		}
 	}
 }
@@ -1163,37 +1175,183 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		background-color: #fff !important;
 	}
 }
-.askDocPageBack{
-	.askDocPage{
-		.askDocPageSection{
-			display: flex;
-    		flex-wrap: wrap;
-    		justify-content: space-between;
-			.askDocPageSectionRight{
-				width: 45%;
-				@include xs{
-					width: 100% !important;
-				}
-				@include sm{
-					width: 100% !important;
-				}
-				@include md{
-					width: 55%;
-				}
-				border: 1px solid lighten($textColorLowSat,70%);
+
+
+/**************       sticky Header        *************/
+
+.stickyHeader{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -80px;
+    transition: all 0.5s;
+    z-index: 999;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.03);
+}
+.showStickyHeader{
+	top: 0;
+}
+.mainSiteOverlay{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s;
+	z-index: 9999;
+	background-color: rgba(13, 50, 30,0.8);
+	.overlayCloseBtn{
+		position: absolute;
+		left: 15px;
+		top: 15px;
+	}	
+}
+.showSiteOverlay{
+	opacity: 1;
+	visibility: visible;
+}
+.mobileMenuParent{
+	z-index: 9999;
+	transition: all 0.4s;
+	display: block;	
+	height: auto;
+	background-color: #fff;
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	right: -230px;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.mobileMenuHeader{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: $mainColorDark;
+		a{
+			width: 50%;
+			color: #fff;
+			padding: 10px 0;
+			text-align: center;
+			font-size: 12px;
+			&:first-child{
+				border-left: 1px solid #fff;
 			}
-			.askDocPageSectionLeft{
-				width: 45%;
-				@include xs{
-					width: 100% !important;
-				}
-				@include sm{
-					width: 100% !important;
-				}
-				@include md{
-					width: 35%;
+		}
+	}
+}
+.mobileMenu{
+	margin-bottom: auto;
+	ul{
+		padding: 0;
+		margin: 0;
+		li{
+			padding-right: 0;
+			border-bottom: 1px solid $backColorDark;
+			margin: 0;
+			a{
+				display: block;
+				width: 100%;
+				line-height: 40px;
+				font-size: 12.5px;
+				color: $textColorLowSat;
+				padding-right: 5px;
+			}
+			&::before{
+				display: none;
+			}
+		}
+		.menu-item-has-children{
+			display: flex ;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			svg{
+				width: 30px;
+				height: 40px;
+				padding: 9px;
+				cursor: pointer;
+				order: 2;
+				transform: rotate(-90deg);
+			}
+			a{
+				width: calc(100% - 30px);
+				order: 1;
+			}
+			ul{
+				display: none;
+				order: 3;
+				width: 100%;
+				padding-right: 7px;
+				background-color: $backColorLight;
+				li{
+					border-bottom: none;
+					a{
+						font-weight: 300;
+						font-size: 11.5px;
+						width: 100%;
+					}
+					ul{
+						display: none;
+					}
 				}
 			}
 		}
 	}
+}
+.relatedInsuranceBack{
+	.relatedInsurance{
+		.generalHeading{
+			h3{
+				font-size: 20px !important;
+				line-height: 40px !important;
+			}
+		}
+		.relatedInsuranceWrapper{
+			display: grid;
+			grid-template-columns: repeat(6,minmax(0,1fr));
+			grid-gap: 10px;
+			@include md{
+				grid-template-columns: repeat(5,minmax(0,1fr));
+			}
+			@include sm{
+				grid-template-columns: repeat(4,minmax(0,1fr));
+			}
+			@include xs{
+				grid-template-columns: repeat(2,minmax(0,1fr));
+			}
+			.relatedInsuranceItem{
+				text-align: center;
+				padding-top: 30px;
+				img{
+					width: 100px;
+					height: 100px;
+					border-radius: 100%;
+				}
+				span{
+					display: block;
+					&:nth-child(2){
+						font-size: 12px;
+						font-weight: 300;
+						margin: 5px 0;
+					}
+					&:nth-child(3){
+						font-size: 15px;
+						font-weight: 600;
+						margin: 10px 0;
+					}
+				}
+			}
+		}
+	}
+}
+.showMobileMenu{
+	right: 0;
+	opacity: 1;
+	visibility: visible;
 }

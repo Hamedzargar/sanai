@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mediumWeight {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
 }
 
@@ -720,9 +720,6 @@ select option {
 .outlineButton::before {
   content: url("data:image/svg+xml,%3Csvg height='15' width='15' fill='%23112437' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330' xml:space='preserve'%3E%3Cpath d='M15 180h263.787l-49.394 49.394c-5.858 5.857-5.858 15.355 0 21.213C232.322 253.535 236.161 255 240 255s7.678-1.465 10.606-4.394l75-75c5.858-5.857 5.858-15.355 0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213 0-5.858 5.857-5.858 15.355 0 21.213L278.787 150H15c-8.284 0-15 6.716-15 15s6.716 15 15 15z'%3E%3C/path%3E%3C/svg%3E");
 }
-.outlineButton:hover {
-  background-color: #f0fbf5 !important;
-}
 
 .siteMessage {
   position: relative;
@@ -866,15 +863,10 @@ select option {
 }
 .mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon {
   display: none;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #d3d3d3;
-  border-radius: 100%;
   align-items: center;
   justify-content: center;
-}
-.mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon svg {
-  transform: rotate(90deg);
+  cursor: pointer;
+  margin-right: 20px;
 }
 @media screen and (max-width: 480px) {
   .mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon {
@@ -883,7 +875,6 @@ select option {
 }
 .mainHeaderParent .mainHeader .headerIcon .mainSearchIcon {
   display: flex;
-  margin-right: 10px;
   cursor: pointer;
 }
 .mainHeaderParent .mainHeader .headerIcon .mainSearchIcon svg {
@@ -1695,7 +1686,12 @@ select option {
 .copyRightParent .copyRight .generalCopyRightCl:nth-child(2) {
   display: flex;
 }
-.copyRightParent .copyRight .generalCopyRightCl a {
+.copyRightParent .copyRight .generalCopyRightCl span {
+  color: #2f362e;
+  font-size: 12px;
+}
+
+.footerSocialIcon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1705,12 +1701,8 @@ select option {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
 }
-.copyRightParent .copyRight .generalCopyRightCl a svg {
+.footerSocialIcon svg {
   fill: #2f362e;
-}
-.copyRightParent .copyRight .generalCopyRightCl span {
-  color: #2f362e;
-  font-size: 12px;
 }
 
 .aboutUsPageBack .aboutUsPage .aboutUsFirstSection {
@@ -1755,8 +1747,9 @@ select option {
 }
 .contactPageBack .contactPage .FirstSectionRight {
   width: 50%;
+  border: 1px solid #e3e7e2;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .contactPageBack .contactPage .FirstSectionRight {
     width: 100%;
   }
@@ -1764,50 +1757,46 @@ select option {
 .contactPageBack .contactPage .FirstSectionLeft {
   width: 38%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .contactPageBack .contactPage .FirstSectionLeft {
     width: 100%;
   }
 }
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox {
+.contactPageBack .contactPage .FirstSectionLeft .callDetails a {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contactPageBack .contactPage .FirstSectionLeft .callDetails a span {
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+}
+.contactPageBack .contactPage .FirstSectionLeft .callDetails a svg {
+  margin-left: 10px;
+}
+.contactPageBack .contactPage .FirstSectionLeft .contactSocial h4 {
+  text-align: center;
+}
+
+.socialIconsWrapper {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs {
-  width: 25%;
+.socialIconsWrapper a {
   display: flex;
-  flex-direction: column;
-  margin: 0 15px;
-  padding: 30px 20px;
-}
-@media screen and (max-width: 480px) {
-  .contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs {
-    width: 90%;
-    margin: 10px 0 !important;
-  }
-}
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection {
-  display: flex;
-  padding: 15px 0;
-}
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection span {
-  padding-right: 6px;
-  font-weight: 300;
-}
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .topSection svg {
-  fill: #ebecf2;
-}
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection {
-  display: flex;
-  flex-direction: column;
-}
-.contactPageBack .contactPage .contactPageBoxBack .contactPageBox .contactBoxs .bottomSection span {
-  font-weight: 300;
+  margin: 0 5px;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(13, 50, 30, 0.07);
+  border-radius: 100%;
 }
 
 .insuranceIntroBack {
-  padding: 50px 0 0 30px;
+  padding: 50px 0;
 }
 .insuranceIntroBack .insuranceIntro {
   display: flex;
@@ -1817,9 +1806,31 @@ select option {
 .insuranceIntroBack .insuranceIntro .insuranceIntroInfo {
   width: 55%;
 }
+@media screen and (max-width: 768px) {
+  .insuranceIntroBack .insuranceIntro .insuranceIntroInfo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .insuranceIntroBack .insuranceIntro .insuranceIntroImage {
   position: relative;
   width: 35%;
+}
+@media screen and (max-width: 768px) {
+  .insuranceIntroBack .insuranceIntro .insuranceIntroImage {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .insuranceIntroBack .insuranceIntro .insuranceIntroImage {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .insuranceIntroBack .insuranceIntro .insuranceIntroImage {
+    width: 100%;
+  }
 }
 .insuranceIntroBack .insuranceIntro .insuranceIntroImage img {
   display: block;
@@ -1850,8 +1861,8 @@ select option {
 .insuranceSectionBack .insuranceSection .generalHeading h2 {
   font-size: 24px !important;
   word-spacing: -3px !important;
-  margin-bottom: 30px !important;
 }
+
 .insuranceWImage .insuranceSectionInner {
   display: flex;
   flex-wrap: wrap;
@@ -1861,8 +1872,30 @@ select option {
 .insuranceWImage .insuranceSectionInner .insuranceSectionText {
   width: 60%;
 }
+@media screen and (max-width: 768px) {
+  .insuranceWImage .insuranceSectionInner .insuranceSectionText {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .insuranceWImage .insuranceSectionInner .insuranceSectionImg {
   width: 35%;
+}
+@media screen and (max-width: 768px) {
+  .insuranceWImage .insuranceSectionInner .insuranceSectionImg {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .insuranceWImage .insuranceSectionInner .insuranceSectionImg {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .insuranceWImage .insuranceSectionInner .insuranceSectionImg {
+    width: 100%;
+  }
 }
 
 .insuranceReverse .insuranceSectionInner {
@@ -1873,45 +1906,187 @@ select option {
   background-color: #fff !important;
 }
 
-.askDocPageBack .askDocPage .askDocPageSection {
+/**************       sticky Header        *************/
+.stickyHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -80px;
+  transition: all 0.5s;
+  z-index: 999;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.03);
+}
+
+.showStickyHeader {
+  top: 0;
+}
+
+.mainSiteOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  z-index: 9999;
+  background-color: rgba(13, 50, 30, 0.8);
+}
+.mainSiteOverlay .overlayCloseBtn {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.showSiteOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenuParent {
+  z-index: 9999;
+  transition: all 0.4s;
+  display: block;
+  height: auto;
+  background-color: #fff;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  right: -230px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobileMenuParent .mobileMenuHeader {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: #0d321e;
 }
-.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
-  width: 45%;
-  border: 1px solid #e3e7e2;
+.mobileMenuParent .mobileMenuHeader a {
+  width: 50%;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
 }
-@media screen and (max-width: 480px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
-    width: 100% !important;
+.mobileMenuParent .mobileMenuHeader a:first-child {
+  border-left: 1px solid #fff;
+}
+
+.mobileMenu {
+  margin-bottom: auto;
+}
+.mobileMenu ul {
+  padding: 0;
+  margin: 0;
+}
+.mobileMenu ul li {
+  padding-right: 0;
+  border-bottom: 1px solid #f7f8f7;
+  margin: 0;
+}
+.mobileMenu ul li a {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  font-size: 12.5px;
+  color: #2f362e;
+  padding-right: 5px;
+}
+.mobileMenu ul li::before {
+  display: none;
+}
+.mobileMenu ul .menu-item-has-children {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mobileMenu ul .menu-item-has-children svg {
+  width: 30px;
+  height: 40px;
+  padding: 9px;
+  cursor: pointer;
+  order: 2;
+  transform: rotate(-90deg);
+}
+.mobileMenu ul .menu-item-has-children a {
+  width: calc(100% - 30px);
+  order: 1;
+}
+.mobileMenu ul .menu-item-has-children ul {
+  display: none;
+  order: 3;
+  width: 100%;
+  padding-right: 7px;
+  background-color: #f6fbf5;
+}
+.mobileMenu ul .menu-item-has-children ul li {
+  border-bottom: none;
+}
+.mobileMenu ul .menu-item-has-children ul li a {
+  font-weight: 300;
+  font-size: 11.5px;
+  width: 100%;
+}
+.mobileMenu ul .menu-item-has-children ul li ul {
+  display: none;
+}
+
+.relatedInsuranceBack .relatedInsurance .generalHeading h3 {
+  font-size: 20px !important;
+  line-height: 40px !important;
+}
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-gap: 10px;
+}
+@media screen and (max-width: 992px) {
+  .relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 768px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
-    width: 100% !important;
+  .relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}
-@media screen and (max-width: 992px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
-    width: 55%;
-  }
-}
-.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
-  width: 45%;
 }
 @media screen and (max-width: 480px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
-    width: 100% !important;
+  .relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media screen and (max-width: 768px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
-    width: 100% !important;
-  }
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper .relatedInsuranceItem {
+  text-align: center;
+  padding-top: 30px;
 }
-@media screen and (max-width: 992px) {
-  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
-    width: 35%;
-  }
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper .relatedInsuranceItem img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper .relatedInsuranceItem span {
+  display: block;
+}
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper .relatedInsuranceItem span:nth-child(2) {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 5px 0;
+}
+.relatedInsuranceBack .relatedInsurance .relatedInsuranceWrapper .relatedInsuranceItem span:nth-child(3) {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.showMobileMenu {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style-rtl.css.map */

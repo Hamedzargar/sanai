@@ -1626,12 +1626,49 @@ select option {
 .generalFooterParent .generalfooter .generalFooterCl {
   width: 16%;
 }
+@media screen and (max-width: 480px) {
+  .generalFooterParent .generalfooter .generalFooterCl {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .generalFooterParent .generalfooter .generalFooterCl {
+    margin: 10px 0;
+  }
+}
 .generalFooterParent .generalfooter .generalFooterCl:nth-child(1) {
   width: 40%;
+}
+@media screen and (max-width: 480px) {
+  .generalFooterParent .generalfooter .generalFooterCl:nth-child(1) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .generalFooterParent .generalfooter .generalFooterCl:nth-child(1) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .generalFooterParent .generalfooter .generalFooterCl:nth-child(1) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .generalFooterParent .generalfooter .generalFooterCl p {
   color: #8d8d8d;
   width: 55%;
+}
+@media screen and (max-width: 768px) {
+  .generalFooterParent .generalfooter .generalFooterCl p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .generalFooterParent .generalfooter .generalFooterCl p {
+    width: 100%;
+  }
 }
 .generalFooterParent .generalfooter .generalFooterCl ul li {
   margin: 12px 0;
@@ -1834,4 +1871,47 @@ select option {
 
 .insuranceNoBack .insuranceSectionText {
   background-color: #fff !important;
+}
+
+.askDocPageBack .askDocPage .askDocPageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+  width: 45%;
+  border: 1px solid #e3e7e2;
+}
+@media screen and (max-width: 480px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 55%;
+  }
+}
+.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+  width: 45%;
+}
+@media screen and (max-width: 480px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 35%;
+  }
 }/*# sourceMappingURL=style-rtl.css.map */

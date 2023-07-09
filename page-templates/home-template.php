@@ -114,25 +114,25 @@ get_header();
         <div class="homePageCountNum sectionPadding mainView">
             <div class="outerCountNum">
                 <div class="innerCountNum highPadding centeredText circle1 darkBoxBack">
-                    <span class="numbePart">62%</span>
+                    <div class="numberParent"><span class="numbePart" id="numb1">62%</span><span>%</span></div>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
                 <div class="innerCountNum highPadding centeredText circle2 mainBorder">
-                    <span class="numbePart">62%</span>
+                    <div class="numberParent"><span class="numbePart"  id="numb2">62%</span><span>%</span></div>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
                 <div class="innerCountNum highPadding centeredText circle3 mainBoxBack">
-                    <span class="numbePart">62%</span>
+                    <div class="numberParent"><span class="numbePart"  id="numb3">62%</span><span>%</span></div>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>
             <div class="outerCountNum">
                 <div class="innerCountNum highPadding centeredText circle4 mainBorder">
-                    <span class="numbePart">62%</span>
+                    <div class="numberParent"><span class="numbePart"  id="numb4">62%</span><span>%</span></div>
                     <span class="descPart smallerText">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و</span>
                 </div>
             </div>

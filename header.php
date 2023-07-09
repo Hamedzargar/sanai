@@ -24,10 +24,9 @@
 </div>
 
 <div class="mobileMenuParent">
-	<div class="mobileMenuHeader">
-		<a href="#">دریافت نوبت</a>
-		<a href="#">از دکتر بپرسید</a>
-	</div>
+	<a href="#">
+	<object data="<?php echo get_template_directory_uri()?>/img/logo.svg" type="image/svg+xml" style="height:60px;"></object>
+	</a>
 	<?php
 	wp_nav_menu(
 		array(
@@ -36,6 +35,15 @@
 		)
 	);
 	?> 
+	<a class="generalButton" href="#">دریافت نوبت</a>
+</div>
+
+<div class="searchParent">
+	<span class="mediumWeight highMargined centeredText">موضوع مورد نظر خود را در کادر زیر وارد کنید</span>
+    <form action="/" method="get">
+        <button type="submit">جستجو</button>
+        <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="موضوع مورد نظر خود را سرچ کنید" />
+    </form>
 </div>
 
 

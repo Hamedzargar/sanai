@@ -2089,4 +2089,47 @@ select option {
   right: 0;
   opacity: 1;
   visibility: visible;
+}
+
+.askDocPageBack .askDocPage .askDocPageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+  width: 45%;
+  border: 1px solid #e3e7e2;
+}
+@media screen and (max-width: 480px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionRight {
+    width: 55%;
+  }
+}
+.askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+  width: 45%;
+}
+@media screen and (max-width: 480px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .askDocPageBack .askDocPage .askDocPageSection .askDocPageSectionLeft {
+    width: 35%;
+  }
 }/*# sourceMappingURL=style-rtl.css.map */

@@ -866,15 +866,10 @@ select option {
 }
 .mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon {
   display: none;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #d3d3d3;
-  border-radius: 100%;
   align-items: center;
   justify-content: center;
-}
-.mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon svg {
-  transform: rotate(90deg);
+  cursor: pointer;
+  margin-right: 20px;
 }
 @media screen and (max-width: 480px) {
   .mainHeaderParent .mainHeader .headerIcon .mobileMenuIcon {
@@ -883,7 +878,6 @@ select option {
 }
 .mainHeaderParent .mainHeader .headerIcon .mainSearchIcon {
   display: flex;
-  margin-right: 10px;
   cursor: pointer;
 }
 .mainHeaderParent .mainHeader .headerIcon .mainSearchIcon svg {
@@ -1658,7 +1652,12 @@ select option {
 .copyRightParent .copyRight .generalCopyRightCl:nth-child(2) {
   display: flex;
 }
-.copyRightParent .copyRight .generalCopyRightCl a {
+.copyRightParent .copyRight .generalCopyRightCl span {
+  color: #2f362e;
+  font-size: 12px;
+}
+
+.footerSocialIcon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1668,12 +1667,8 @@ select option {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
 }
-.copyRightParent .copyRight .generalCopyRightCl a svg {
+.footerSocialIcon svg {
   fill: #2f362e;
-}
-.copyRightParent .copyRight .generalCopyRightCl span {
-  color: #2f362e;
-  font-size: 12px;
 }
 
 .aboutUsPageBack .aboutUsPage .aboutUsFirstSection {
@@ -1834,4 +1829,142 @@ select option {
 
 .insuranceNoBack .insuranceSectionText {
   background-color: #fff !important;
+}
+
+/**************       sticky Header        *************/
+.stickyHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -80px;
+  transition: all 0.5s;
+  z-index: 999;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.03);
+}
+
+.showStickyHeader {
+  top: 0;
+}
+
+.mainSiteOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  z-index: 9999;
+  background-color: rgba(13, 50, 30, 0.8);
+}
+.mainSiteOverlay .overlayCloseBtn {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.showSiteOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenuParent {
+  z-index: 9999;
+  transition: all 0.4s;
+  display: block;
+  height: auto;
+  background-color: #fff;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  right: -230px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobileMenuParent .mobileMenuHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #0d321e;
+}
+.mobileMenuParent .mobileMenuHeader a {
+  width: 50%;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+}
+.mobileMenuParent .mobileMenuHeader a:first-child {
+  border-left: 1px solid #fff;
+}
+
+.mobileMenu {
+  margin-bottom: auto;
+}
+.mobileMenu ul {
+  padding: 0;
+  margin: 0;
+}
+.mobileMenu ul li {
+  padding-right: 0;
+  border-bottom: 1px solid #f7f8f7;
+  margin: 0;
+}
+.mobileMenu ul li a {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  font-size: 12.5px;
+  color: #2f362e;
+  padding-right: 5px;
+}
+.mobileMenu ul li::before {
+  display: none;
+}
+.mobileMenu ul .menu-item-has-children {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mobileMenu ul .menu-item-has-children svg {
+  width: 30px;
+  height: 40px;
+  padding: 9px;
+  cursor: pointer;
+  order: 2;
+  transform: rotate(-90deg);
+}
+.mobileMenu ul .menu-item-has-children a {
+  width: calc(100% - 30px);
+  order: 1;
+}
+.mobileMenu ul .menu-item-has-children ul {
+  display: none;
+  order: 3;
+  width: 100%;
+  padding-right: 7px;
+  background-color: #f6fbf5;
+}
+.mobileMenu ul .menu-item-has-children ul li {
+  border-bottom: none;
+}
+.mobileMenu ul .menu-item-has-children ul li a {
+  font-weight: 300;
+  font-size: 11.5px;
+  width: 100%;
+}
+.mobileMenu ul .menu-item-has-children ul li ul {
+  display: none;
+}
+
+.showMobileMenu {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style-rtl.css.map */

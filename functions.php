@@ -147,6 +147,9 @@ function sanai_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if(is_page_template(array('page-templates/faq-template.php'))){
+		wp_enqueue_script( 'faq-script', get_template_directory_uri() . '/js/faq.js', array(), _S_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'sanai_scripts' );
 

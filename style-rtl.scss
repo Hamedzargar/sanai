@@ -1025,67 +1025,81 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 		.FirstSectionRight{
 			width: 50%;
-			@include xs{
+			border: 1px solid lighten($color: $textColorLowSat, $amount: 70%);
+			@include sm{
 				width: 100%;
 			}
 		}
 		.FirstSectionLeft{
 			width: 38%;
-			@include xs{
+			@include sm{
 				width: 100%;
 			}
-		}
-		.contactPageBoxBack{
-			.contactPageBox{
-				display: flex;
-				justify-content: center;
-				flex-wrap: wrap;
-				.contactBoxs{
-					width: 25%;
+			.callDetails{
+				a{
 					display: flex;
-					flex-direction: column;
-					margin: 0 15px;
-					padding: 30px 20px;
-					// border-radius: 20px;
-					@include xs{
-						width: 90%;
-						margin: 10px 0 !important;
-					}
-					.topSection{
+					align-items: center;
+					justify-content: flex-start;
+					span{
 						display: flex;
-						padding: 15px 0;
-						span{
-							padding-right: 6px;
-    						font-weight: 300;
-						}
-						svg{
-							fill: #ebecf2;
-						}
+						align-items: center;
+						line-height: 25px;
 					}
-					.bottomSection{
-						display: flex;
-						flex-direction: column;
-						span{
-							font-weight: 300;
-						}
+					svg{
+						margin-left: 10px;
 					}
 				}
+			}
+			.contactSocial{
+				h4{
+					text-align: center;
+				}
+				
 			}
 		}
 	}
 }
+.socialIconsWrapper{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					a{
+						display: flex;
+						margin: 0 5px;
+						width: 45px;
+						height: 45px;
+						justify-content: center;
+						align-items: center;
+						background-color: rgba(13, 50, 30 , 0.07);
+						border-radius: 100%;
+					}
+				}
 .insuranceIntroBack{
-	padding: 50px 0 0 30px;
+	padding: 50px 0;
 	.insuranceIntro{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		.insuranceIntroInfo{
 			width: 55%;
+			@include sm{
+				width: 100%;
+				margin-bottom: 20px;
+			}
 		}
 		.insuranceIntroImage{
 			position: relative;
 			width: 35%;
+			@include sm{
+				width: 60%;
+				margin: auto;
+			}
+			@include xs{
+				width: 80%;
+			}
+			@include xxs{
+				width: 100%;
+			}
 			img{
 				display: block;
 			}
@@ -1119,19 +1133,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			h2{
 				font-size: 24px !important;
 				word-spacing: -3px !important;
-				margin-bottom: 30px !important;
-			}
-		}
-		.insuranceSectionInner{
-			.insuranceSectionText{
-				
-			}
-			.insuranceSectionImg{
-
 			}
 		}
 	}
-	
 }
 .insuranceWImage{
 	.insuranceSectionInner{
@@ -1140,10 +1144,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		justify-content: space-between;
 		align-items: center;
 		.insuranceSectionText{
-			width: 60%;	
+			width: 60%;
+			@include sm{
+				width: 100%;
+				margin-bottom: 20px;
+			}
 		}
 		.insuranceSectionImg{
 			width: 35%;
+			@include sm{
+				width: 60%;
+				margin: auto;
+			}
+			@include xs{
+				width: 80%;
+			}
+			@include xxs{
+				width: 100%;
+			}
 		}
 	}
 }
@@ -1280,6 +1298,52 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					}
 					ul{
 						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+.relatedInsuranceBack{
+	.relatedInsurance{
+		.generalHeading{
+			h3{
+				font-size: 20px !important;
+				line-height: 40px !important;
+			}
+		}
+		.relatedInsuranceWrapper{
+			display: grid;
+			grid-template-columns: repeat(6,minmax(0,1fr));
+			grid-gap: 10px;
+			@include md{
+				grid-template-columns: repeat(5,minmax(0,1fr));
+			}
+			@include sm{
+				grid-template-columns: repeat(4,minmax(0,1fr));
+			}
+			@include xs{
+				grid-template-columns: repeat(2,minmax(0,1fr));
+			}
+			.relatedInsuranceItem{
+				text-align: center;
+				padding-top: 30px;
+				img{
+					width: 100px;
+					height: 100px;
+					border-radius: 100%;
+				}
+				span{
+					display: block;
+					&:nth-child(2){
+						font-size: 12px;
+						font-weight: 300;
+						margin: 5px 0;
+					}
+					&:nth-child(3){
+						font-size: 15px;
+						font-weight: 600;
+						margin: 10px 0;
 					}
 				}
 			}

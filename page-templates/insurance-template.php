@@ -22,6 +22,75 @@ get_header();
         
     </div>
 </div>
+<div class="relatedInsuranceBack">
+    <div class="relatedInsurance mainView">
+        <div class="generalHeading">
+            <h3>سایر بیمه‌های طرف قرارداد</h2>
+        </div>
+        <div class="relatedInsuranceWrapper">
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+            <a href="#" class="relatedInsuranceItem lightBoxBack highRadius mediumPadding">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
+                <span>کلینیک فیزیوتراپی با</span>
+                <span>بیمه ارتش</span>
+            </a>
+        </div>
+    </div>
+</div>
 <div class="insuranceDivider mainView">
     <img src="<?php echo get_template_directory_uri(); ?>/img/bimeh-sample-min.jpg" alt="">
 </div>

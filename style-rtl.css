@@ -2261,4 +2261,109 @@ select option {
   .bookingFormPageBack .bookingFormPage .bookingFormSection .bookingFormSectionLeft {
     width: 35%;
   }
+}
+
+.catsNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.catsNav span, .catsNav a {
+  font-size: 13.5px;
+  margin-left: 10px;
+}
+.catsNav .catsNavWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.catsNav > span {
+  font-weight: 600;
+}
+.catsNav .currentCatNavItem {
+  border-bottom: 1px dashed #d27b12;
+  padding-bottom: 3px;
+  color: #d27b12;
+}
+
+.archiveParent {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .archiveParent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .archiveParent {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 10px;
+  }
+}
+.archiveParent > a img {
+  display: block;
+}
+.archiveParent > a h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.archiveParent > a p {
+  font-size: 13px;
+  color: #747474;
+  line-height: 25px;
+}
+.archiveParent > a footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.archiveParent > a footer .archiveCartItem {
+  display: flex;
+  align-items: center;
+}
+.archiveParent > a footer .archiveCartItem svg {
+  margin-left: 5px;
+  fill: #b3b3b3;
+}
+.archiveParent > a footer .archiveCartItem span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a7a7a7;
+}
+.archiveParent > a footer .archiveCartItem:nth-child(1) {
+  margin-left: 10px;
+}
+
+.archivePagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.archivePagination .page-numbers {
+  background-color: #f3b870;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  border: 1px solid #f3b870;
+}
+.archivePagination .leftArrow {
+  display: flex;
+  align-items: center;
+}
+.archivePagination .next, .archivePagination .prev {
+  background: transparent;
+  border: none;
+}
+.archivePagination .current {
+  background: transparent;
+  color: #f3b870;
 }/*# sourceMappingURL=style-rtl.css.map */

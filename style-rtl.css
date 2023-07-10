@@ -390,7 +390,7 @@ p {
 }
 
 .gradient1 {
-  background: linear-gradient(90deg, #f7f8f7 0%, #f6fbf5 100%);
+  background: linear-gradient(90deg, #f7f8f7 0%, #eff1ef 100%);
 }
 
 .gradient2 {
@@ -1384,19 +1384,22 @@ select option {
 .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum span {
   display: flex;
   align-items: center;
+}
+.homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numberParent {
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
 }
-.homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numbePart {
-  font-size: 50px;
-}
 @media screen and (max-width: 992px) {
-  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numbePart {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numberParent {
     font-size: 35px;
   }
 }
 @media screen and (max-width: 480px) {
-  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numbePart {
+  .homePageCountNumParent .homePageCountNum .outerCountNum .innerCountNum .numberParent {
     font-size: 25px;
   }
 }
@@ -1932,7 +1935,7 @@ select option {
   visibility: hidden;
   transition: all 0.4s;
   z-index: 9999;
-  background-color: rgba(13, 50, 30, 0.8);
+  background-color: rgba(9, 33, 20, 0.9);
 }
 .mainSiteOverlay .overlayCloseBtn {
   position: absolute;
@@ -1951,7 +1954,7 @@ select option {
   display: block;
   height: auto;
   background-color: #fff;
-  width: 200px;
+  width: 70%;
   height: 100%;
   position: fixed;
   right: -230px;
@@ -1959,7 +1962,14 @@ select option {
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.mobileMenuParent object {
+  height: 40px !important;
+}
+.mobileMenuParent .generalButton {
+  margin: 50px auto;
 }
 .mobileMenuParent .mobileMenuHeader {
   display: flex;
@@ -1978,16 +1988,13 @@ select option {
   border-left: 1px solid #fff;
 }
 
-.mobileMenu {
-  margin-bottom: auto;
-}
 .mobileMenu ul {
   padding: 0;
   margin: 0;
 }
 .mobileMenu ul li {
   padding-right: 0;
-  border-bottom: 1px solid #f7f8f7;
+  border-bottom: 1px solid #eff1ef;
   margin: 0;
 }
 .mobileMenu ul li a {
@@ -2013,7 +2020,6 @@ select option {
   padding: 9px;
   cursor: pointer;
   order: 2;
-  transform: rotate(-90deg);
 }
 .mobileMenu ul .menu-item-has-children a {
   width: calc(100% - 30px);
@@ -2024,15 +2030,18 @@ select option {
   order: 3;
   width: 100%;
   padding-right: 7px;
-  background-color: #f6fbf5;
+  background-color: #f7f8f7;
 }
 .mobileMenu ul .menu-item-has-children ul li {
+  border-color: #fff;
+}
+.mobileMenu ul .menu-item-has-children ul li:last-child {
   border-bottom: none;
 }
 .mobileMenu ul .menu-item-has-children ul li a {
-  font-weight: 300;
-  font-size: 11.5px;
+  font-size: 11px;
   width: 100%;
+  padding-right: 0;
 }
 .mobileMenu ul .menu-item-has-children ul li ul {
   display: none;
@@ -2158,6 +2167,57 @@ select option {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.searchParent {
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  width: 50%;
+  height: -moz-max-content;
+  height: max-content;
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .searchParent {
+    width: 95%;
+  }
+}
+.searchParent span {
+  color: #fff;
+  display: block;
+}
+.searchParent form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.searchParent form button {
+  width: 100px;
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #258a52;
+  color: #fff;
+  padding: 10px 0;
+  order: 2;
+}
+.searchParent form input {
+  width: calc(100% - 100px);
+  padding: 10px;
+  margin: 0;
+  line-height: 40px;
+  border: none;
+  border-radius: unset;
+  order: 1;
 }
 
 .bookingFormPageBack .bookingFormPage .bookingFormSection {

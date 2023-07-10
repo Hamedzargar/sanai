@@ -657,11 +657,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				span{
 					display: flex;
 					align-items: center;
+				}
+				.numberParent{
+					font-size: 50px;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
 					margin-right: auto;
 					margin-left: auto;
-				}
-				.numbePart{
-					font-size: 50px;
 					@include md{
 						font-size: 35px;
 					}
@@ -1202,7 +1205,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	visibility: hidden;
 	transition: all 0.4s;
 	z-index: 9999;
-	background-color: rgba(13, 50, 30,0.8);
+	background-color: rgba(9, 33, 20, 0.9);
 	.overlayCloseBtn{
 		position: absolute;
 		left: 15px;
@@ -1219,7 +1222,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	display: block;	
 	height: auto;
 	background-color: #fff;
-	width: 200px;
+	width: 70%;
 	height: 100%;
 	position: fixed;
 	right: -230px;
@@ -1227,7 +1230,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	visibility: hidden;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
+	padding: 10px;
+	object{
+		height: 40px !important;
+	}
+	.generalButton{
+		margin: 50px auto;
+	}
 	.mobileMenuHeader{
 		display: flex;
 		flex-wrap: wrap;
@@ -1246,13 +1256,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 .mobileMenu{
-	margin-bottom: auto;
 	ul{
 		padding: 0;
 		margin: 0;
 		li{
 			padding-right: 0;
-			border-bottom: 1px solid $backColorDark;
+			border-bottom: 1px solid $backColorLight;
 			margin: 0;
 			a{
 				display: block;
@@ -1277,7 +1286,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				padding: 9px;
 				cursor: pointer;
 				order: 2;
-				transform: rotate(-90deg);
 			}
 			a{
 				width: calc(100% - 30px);
@@ -1288,13 +1296,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 				order: 3;
 				width: 100%;
 				padding-right: 7px;
-				background-color: $backColorLight;
+				background-color: $backColorDark;
 				li{
-					border-bottom: none;
+					border-color: #fff;
+					&:last-child{
+						border-bottom: none;
+					}
 					a{
-						font-weight: 300;
-						font-size: 11.5px;
+						font-size: 11px;
 						width: 100%;
+						padding-right: 0;
 					}
 					ul{
 						display: none;
@@ -1417,6 +1428,54 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 					margin: auto;
 				}
 			}
+		}
+	}
+}
+.searchParent{
+	margin: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 9999;
+	width: 50%;
+	height: max-content;
+	display: none;
+	@include xs{
+		width: 95%;
+	}
+	span{
+		color: #fff;
+		display: block;
+	}
+	form{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 10px;
+		overflow: hidden;
+
+		button{
+			width: 100px;
+			line-height: 40px;
+			padding: 0;
+			margin: 0;
+			border: none;
+			background-color: $mainColor;
+			color: #fff;
+			padding: 10px 0;
+			order: 2;
+		}
+		input{
+			width: calc(100% - 100px);
+			padding: 10px;
+			margin: 0;
+			line-height: 40px;
+			border: none;
+			border-radius: unset;
+			order: 1;
 		}
 	}
 }

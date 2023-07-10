@@ -176,4 +176,63 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+function prefix_category_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_category_title' );
 
+
+function excerpt($limit) {
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+
+	if (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ", $excerpt) . '...';
+	} else {
+		$excerpt = implode(" ", $excerpt);
+	}
+
+	$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+	return $excerpt;
+}
+
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+
+  if (count($content) >= $limit) {
+	  array_pop($content);
+	  $content = implode(" ", $content) . '...';
+  } else {
+	  $content = implode(" ", $content);
+  }
+
+  $content = preg_replace('/\[.+\]/','', $content);
+  $content = apply_filters('the_content', $content); 
+  $content = str_replace(']]>', ']]&gt;', $content);
+
+  return $content;
+}
+
+function pagination_bar() {
+	global $wp_query;
+
+	$total_pages = $wp_query->max_num_pages;
+
+	if ($total_pages > 1){
+		// $current_page = max(1, get_query_var('paged'));
+		global $wp_query;
+		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+		echo paginate_links(array(
+			'base' =>@add_query_arg('paged','%#%'),
+			'format' => '/page/%#%',
+			'current' => $current,
+			'total' => $total_pages,
+			'next_text' => '<span class="leftArrow"><svg width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" fill="#3C3C3C" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve"><path fill="none" stroke="#3C3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="m20.5 26.5-12-12 12-12"></path></svg></span>',
+			'prev_text' => '<span class="rightArrow"><svg width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" fill="#3C3C3C" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve"><path fill="none" stroke="#3C3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="m8.5 2.5 12 12-12 12"></path></svg></span>'
+		));
+	}
+}

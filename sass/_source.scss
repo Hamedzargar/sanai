@@ -156,7 +156,7 @@ h1,h2,h3,h4,h5,h6{
 	}
 }
 .mediumWeight{
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 14px;
 }
 p{
@@ -383,12 +383,12 @@ input{
 	padding: 10px;
 	&[type=text] , &[type=password] , &[type=email] , &[type=tel] , &[type=url]{
 		border: none;
-		background-color: $backColorLight;
+		background-color: $inputBackColor;
 		border-radius: 5px;
 		color: $textColorDark;
 		font-size: 14px;
 		@include placeholder{
-			color: #373c60;
+			color: $mainColorDark;
 			opacity: 0.25;
 		}
 	}
@@ -422,7 +422,7 @@ textarea{
 	padding: 10px;
 	resize: none;
 	border-radius: 5px;
-	background-color: $backColorLight;
+	background-color: $inputBackColor;
 	border: none;
 	color: $textColorDark;
 	font-size: 14px;

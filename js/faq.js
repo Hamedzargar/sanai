@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $('.faqQ').click(function(){
+        if($(this).siblings('.faqA').is(':visible')){
+            $(this).siblings('.faqA').slideUp(400);
+        }
+        else{
+            $('.faqA').slideUp(400);
+            $(this).siblings('.faqA').slideDown(400);
+        }
+    });
+});

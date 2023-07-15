@@ -6,12 +6,22 @@
  *
  * @package sanai
  */
-
+$taxonomy = 'category'; 
+$primary_cat_id=get_post_meta(get_the_id(),'_yoast_wpseo_primary_' . $taxonomy, true);
+if($primary_cat_id){
+    $primary_cat = get_term($primary_cat_id, $taxonomy);
+}
+else{
+	$primary_cat = wp_get_post_terms( get_the_id(), 'category', array( 'fields' => 'all' ) )[0];
+}
 ?>
 
 <a href="<?php echo get_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php the_post_thumbnail(); ?>
+    <div class="mainCategorySection mediumMargined">
+		<span class="lowRadius"><?php echo $primary_cat->name ?></span>
+	</div>
     <h2><?php echo get_the_title(); ?></h2>
     <p><?php echo excerpt(27); ?></p>
     <footer>
